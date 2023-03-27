@@ -2506,7 +2506,7 @@
       <summary>
         <para>Gets or sets the ordinal number of a day within a defined month.</para>
       </summary>
-      <value>A positive integer value that specifies the day number within a month.</value>
+      <value>A positive integer value that specifies the day number within a month. The default value is 1.</value>
     </member>
     <member name="P:DevExpress.XtraScheduler.IRecurrenceInfo.Duration">
       <summary>
@@ -2542,7 +2542,7 @@
       <summary>
         <para>Gets or sets the month on which the appointment occurs.</para>
       </summary>
-      <value>A positive integer value that specifies the month number.</value>
+      <value>A positive integer value that specifies the month number. The default value is 1.</value>
     </member>
     <member name="P:DevExpress.XtraScheduler.IRecurrenceInfo.OccurrenceCount">
       <summary>
@@ -6255,7 +6255,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
       <summary>
         <para>Gets or sets the ordinal number of a day within a defined month.</para>
       </summary>
-      <value>A positive integer value that specifies the day number within a month.</value>
+      <value>A positive integer value that specifies the day number within a month. The default value is 1.</value>
     </member>
     <member name="P:DevExpress.XtraScheduler.RecurrenceInfo.Duration">
       <summary>
@@ -6313,7 +6313,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
       <summary>
         <para>Gets or sets the month on which the corresponding appointment reoccurs.</para>
       </summary>
-      <value>A positive integer value that specifies the month number.</value>
+      <value>A positive integer value that specifies the month number. The default value is 1.</value>
     </member>
     <member name="P:DevExpress.XtraScheduler.RecurrenceInfo.OccurrenceCount">
       <summary>

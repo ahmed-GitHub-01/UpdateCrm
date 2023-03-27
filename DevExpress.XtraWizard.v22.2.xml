@@ -281,7 +281,7 @@
     </member>
     <member name="T:DevExpress.XtraWizard.WizardControl">
       <summary>
-        <para>Allows you to generate multi-step wizard dialogs.</para>
+        <para>Allows you to generate multi-step wizard dialogs and Windows-inspired installer UIs.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraWizard.WizardControl.#ctor">

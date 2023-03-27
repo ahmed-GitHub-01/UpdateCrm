@@ -5960,6 +5960,11 @@ is dependent on the type of control embedded in this layout item.</value>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraLayout.Utils.LayoutGroupItemCollection"/> class with the default settings.</para>
       </summary>
     </member>
+    <member name="M:DevExpress.XtraLayout.Utils.LayoutGroupItemCollection.#ctor(DevExpress.XtraLayout.LayoutGroup)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraLayout.Utils.LayoutGroupItemCollection"/> class with specified settings.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraLayout.Utils.LayoutGroupItemCollection.AddGroup">
       <summary>
         <para>Creates a new <see cref="T:DevExpress.XtraLayout.LayoutControlGroup"/> and places it inside this <see cref="T:DevExpress.XtraLayout.Utils.LayoutGroupItemCollection"/>.</para>

@@ -3523,22 +3523,25 @@
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.ChangeFieldExpandedAsync(DevExpress.XtraPivotGrid.PivotGridFieldBase,System.Boolean)">
       <summary>
-        <para>Expands or collapses all values of the specified field asynchronously.</para>
+        <para>Expands or collapses all values of the specified Pivot Grid field asynchronously.</para>
       </summary>
       <param name="field">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridFieldBase"/> descendant that specifies the field whose values should be expanded/collapsed.</param>
       <param name="expand">true to expand field values; false to collapse them.</param>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.ChangeFieldSortOrderAsync(DevExpress.XtraPivotGrid.PivotGridField)">
       <summary>
         <para>Toggles the sort order of the specified field asynchronously.</para>
       </summary>
       <param name="field">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridField"/> object that specifies a field whose sort order should be toggled.</param>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.ClearFieldSortingAsync(DevExpress.XtraPivotGrid.PivotGridField)">
       <summary>
         <para>Clears field sorting asynchronously in OLAP mode.</para>
       </summary>
       <param name="field">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridField"/> object that specifies the field whose sort order should be changed.</param>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.CloseEditor">
       <summary>
@@ -3552,8 +3555,9 @@
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.CollapseAllAsync">
       <summary>
-        <para>Collapses all columns and rows in a Pivot Grid Control asynchronously.</para>
+        <para>Collapses all columns and rows in a Pivot Grid control asynchronously.</para>
       </summary>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.CollapseAllColumns">
       <summary>
@@ -3564,6 +3568,7 @@
       <summary>
         <para>Collapses all columns asynchronously.</para>
       </summary>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.CollapseAllRows">
       <summary>
@@ -3574,6 +3579,7 @@
       <summary>
         <para>Collapses all rows asynchronously.</para>
       </summary>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.CollapseValue(System.Boolean,System.Object[])">
       <summary>
@@ -3588,6 +3594,7 @@
       </summary>
       <param name="isColumn">true to collapse a column; false to collapse a row.</param>
       <param name="values">An array of field values that identify the column/row to be collapsed.</param>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.ConvertFormatConditionToFormatRules">
       <summary>
@@ -3939,8 +3946,9 @@
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.EndUpdateAsync">
       <summary>
-        <para>Unlocks the Pivot Grid Control after the <see cref="M:DevExpress.XtraPivotGrid.PivotGridControl.BeginUpdate"/> method call, and starts an asynchronous update.</para>
+        <para>Unlocks the Pivot Grid control after the <see cref="M:DevExpress.XtraPivotGrid.PivotGridControl.BeginUpdate"/> method call, and starts an asynchronous update.</para>
       </summary>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridControl.EndUpdateMode">
       <summary>
@@ -3960,8 +3968,9 @@
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.ExpandAllAsync">
       <summary>
-        <para>Expands all columns and rows in the Pivot Grid Control asynchronously.</para>
+        <para>Expands all columns and rows in the Pivot Grid control asynchronously.</para>
       </summary>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.ExpandAllColumns">
       <summary>
@@ -3972,6 +3981,7 @@
       <summary>
         <para>Expands all columns asynchronously.</para>
       </summary>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.ExpandAllRows">
       <summary>
@@ -3982,6 +3992,7 @@
       <summary>
         <para>Expands all rows asynchronously.</para>
       </summary>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.ExpandValue(System.Boolean,System.Object[])">
       <summary>
@@ -3996,6 +4007,7 @@
       </summary>
       <param name="isColumn">true to expand a column; false to expand a row.</param>
       <param name="values">An array of field values that identify the column/row to be expanded.</param>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="E:DevExpress.XtraPivotGrid.PivotGridControl.ExportFinished">
       <summary>
@@ -5136,22 +5148,25 @@
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.SetDataSourceAsync(System.Object)">
       <summary>
-        <para>Sets a data source for Pivot Grid Control and loads data asynchronously.</para>
+        <para>Sets the data source for the Pivot Grid control and loads data asynchronously.</para>
       </summary>
-      <param name="dataSource">An object that contains data for the PivotGridControl.</param>
+      <param name="dataSource">An object that contains data for the Pivot Grid control.</param>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.SetFieldSortingAsync(DevExpress.XtraPivotGrid.PivotGridField,DevExpress.XtraPivotGrid.PivotSortOrder)">
       <summary>
-        <para>Sets the specified sort order for the specified field asynchronously.</para>
+        <para>Sets the sort order for the specified field asynchronously.</para>
       </summary>
       <param name="field">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridField"/> object that specifies a field whose sort order should be changed.</param>
-      <param name="sortOrder">A <see cref="T:DevExpress.XtraPivotGrid.PivotSortOrder"/> enumeration member that specifies the sort order to be set for the field.</param>
+      <param name="sortOrder">A <see cref="T:DevExpress.XtraPivotGrid.PivotSortOrder"/> enumeration member that specifies the field sort order.</param>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridControl.SetOLAPConnectionStringAsync(System.String)">
       <summary>
         <para>Sets a connection string to a cube in an MS Analysis Services database, and loads data from the cube asynchronously.</para>
       </summary>
       <param name="olapConnectionString">A <see cref="T:System.String"/> that specifies the connection string to an OLAP cube.</param>
+      <returns>An asynchronous operation that returns true in case of success.</returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridControl.ShowCustomFunctions">
       <summary>

@@ -430,29 +430,44 @@
         <para>Enumerates alert window animation effects.</para>
       </summary>
     </member>
+    <member name="F:DevExpress.XtraBars.Alerter.AlertFormShowingEffect.Default">
+      <summary>
+        <para>For ShowAnimationType and HideAnimationType properties, the “Default” value means alerts should be displayed or hidden according to the value of the FormShowingEffect property. For the FormShowingEffect property itself, the “Default” value corresponds to the “FadeIn” effect.</para>
+      </summary>
+    </member>
     <member name="F:DevExpress.XtraBars.Alerter.AlertFormShowingEffect.FadeIn">
       <summary>
-        <para>An alert window is displayed using a fade-in effect.</para>
+        <para>An alert window is displayed and/or hidden with a fade-in effect.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraBars.Alerter.AlertFormShowingEffect.MoveHorizontal">
       <summary>
-        <para>An alert window appears by sliding horizontally onto the screen from out of the screen.</para>
+        <para>An alert window is displayed and/or hidden by sliding horizontally onto the screen.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraBars.Alerter.AlertFormShowingEffect.MoveVertical">
       <summary>
-        <para>An alert window appears by sliding vertically onto the screen from out of the screen.</para>
+        <para>An alert window is displayed and/or hidden by sliding vertically onto the screen.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraBars.Alerter.AlertFormShowingEffect.None">
+      <summary>
+        <para>Alerts are displayed and/or hidden with no animation effects.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraBars.Alerter.AlertFormShowingEffect.Reveal">
+      <summary>
+        <para>Alerts show be shown on-screen and (or) hidden using the Reveal animation (a combination of fade in and zoom in/out effects).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraBars.Alerter.AlertFormShowingEffect.SlideHorizontal">
       <summary>
-        <para>An alert window appears onscreen by enlarging its width gradually, from the zero value to the normal width.</para>
+        <para>An alert window is displayed (or hidden) by gradually increasing its width from 0 to 100% (or vice versa).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraBars.Alerter.AlertFormShowingEffect.SlideVertical">
       <summary>
-        <para>An alert window appears onscreen by enlarging its height gradually from the zero value to the normal height.</para>
+        <para>An alert window is displayed (or hidden) by gradually increasing its height from 0 to 100% (or vice versa).</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraBars.Alerter.AlertInfo">
@@ -1413,6 +1428,13 @@
         <para>Calculates the minumum height of the editor.</para>
       </summary>
       <returns>The minimum height of the editor, in pixels.</returns>
+    </member>
+    <member name="M:DevExpress.XtraEditors.BaseEdit.CanHandleKeyMessage(System.Windows.Forms.Message)">
+      <summary>
+        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
+      </summary>
+      <param name="m" />
+      <returns />
     </member>
     <member name="P:DevExpress.XtraEditors.BaseEdit.CanShowDialog">
       <summary>
@@ -2788,6 +2810,11 @@
         <para>Sets the current node path’s index within a navigation journal, retrieved by the <see cref="M:DevExpress.XtraEditors.BreadCrumbEdit.GetNavigationHistory"/> method.</para>
       </summary>
       <param name="itemIndex">An Int32 value that is the current node path’s index within a complete navigation journal.</param>
+    </member>
+    <member name="M:DevExpress.XtraEditors.BreadCrumbEdit.ShowHistoryPopup">
+      <summary>
+        <para>Invokes the pop-up menu that shows recently visited nodes. See the following help article for more information: History.</para>
+      </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.BreadCrumbEdit.Text">
       <summary>
@@ -13689,7 +13716,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     <member name="F:DevExpress.XtraEditors.Controls.StringId.PictureEditOpenFileFilter">
       <summary>
         <para>Specifies the file masks (filters) for the Open dialog used to load an image from an external file to a <see cref="T:DevExpress.XtraEditors.PictureEdit"/> or <see cref="T:DevExpress.XtraEditors.ImageEdit"/> editor.</para>
-        <para>Return value: Bitmap Files (&#0042;.bmp)|&#0042;.bmp|Graphics Interchange Format (&#0042;.gif)|&#0042;.gif|JPEG File Interchange Format (&#0042;.jpg;&#0042;.jpeg)|&#0042;.jpg;&#0042;.jpeg|Icon Files (&#0042;.ico)|&#0042;.ico|All Picture Files |&#0042;.bmp;&#0042;.gif;&#0042;.jpg;&#0042;.jpeg;&#0042;.ico;&#0042;.png;&#0042;.tif|All Files |&#0042;.&#0042;</para>
+        <para>Return value: Bitmap Files (&#0042;.bmp)|&#0042;.bmp|Graphics Interchange Format (&#0042;.gif)|&#0042;.gif|JPEG File Interchange Format (&#0042;.jpg;&#0042;.jpeg)|&#0042;.jpg;&#0042;.jpeg|Icon Files (&#0042;.ico)|&#0042;.ico|Portable Network Graphics Format (&#0042;.png)|&#0042;.png|Scalable Vector Graphics Format (&#0042;.svg)|&#0042;.svg|All Picture Files |&#0042;.bmp;&#0042;.gif;&#0042;.jpg;&#0042;.jpeg;&#0042;.ico;&#0042;.png;&#0042;.tif;&#0042;.svg|All Files |&#0042;.&#0042;</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.StringId.PictureEditOpenFileTitle">
@@ -13701,7 +13728,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
     <member name="F:DevExpress.XtraEditors.Controls.StringId.PictureEditSaveFileFilter">
       <summary>
         <para>Specifies the file masks (filters) for the Save As dialog used to save the image displayed in a <see cref="T:DevExpress.XtraEditors.PictureEdit"/> or <see cref="T:DevExpress.XtraEditors.ImageEdit"/> editor to an external file.</para>
-        <para>Return value: Bitmap Files (&#0042;.bmp)|&#0042;.bmp|Graphics Interchange Format (&#0042;.gif)|&#0042;.gif|JPEG File Interchange Format (&#0042;.jpg)|&#0042;.jpg</para>
+        <para>Return value: Bitmap Files (&#0042;.bmp)|&#0042;.bmp|Graphics Interchange Format (&#0042;.gif)|&#0042;.gif|JPEG File Interchange Format (&#0042;.jpg)|&#0042;.jpg|Portable Network Graphics Format (&#0042;.png)|&#0042;.png|Scalable Vector Graphics Format (&#0042;.svg)|&#0042;.svg</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.StringId.PictureEditSaveFileTitle">
@@ -17876,6 +17903,14 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
       <typeparam name="T">The type of a ViewModel that stores a command.</typeparam>
       <returns>An IDisposable object. Disposing of this object unbinds the command from this HTML element.</returns>
     </member>
+    <member name="M:DevExpress.XtraEditors.HtmlContentPopup.CalcBestSize(System.Windows.Forms.IWin32Window,System.Int32)">
+      <summary>
+        <para>Calculates the popup size required to fit its content without exceeding the maximum width.</para>
+      </summary>
+      <param name="owner">The owner of this popup.</param>
+      <param name="maxWidth">The maximum allowed popup width.</param>
+      <returns>The optimal popup size required to fit the popup content.</returns>
+    </member>
     <member name="M:DevExpress.XtraEditors.HtmlContentPopup.Close">
       <summary>
         <para>Closes the window.</para>
@@ -17895,6 +17930,16 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     <member name="E:DevExpress.XtraEditors.HtmlContentPopup.Closing">
       <summary>
         <para>Fires when the window is about to be closed. Allows you to cancel the close operation.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.XtraEditors.HtmlContentPopup.CustomDisplayText">
+      <summary>
+        <para>Allows you to specify custom display text for bound field values.</para>
+      </summary>
+    </member>
+    <member name="E:DevExpress.XtraEditors.HtmlContentPopup.CustomizeTemplate">
+      <summary>
+        <para>Fires before a popup is shown on-screen and allows you to modify the HTML-CSS template of this HtmlContentPopup component.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraEditors.HtmlContentPopup.DataContext">
@@ -19007,7 +19052,7 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     </member>
     <member name="T:DevExpress.XtraEditors.LookUpEdit">
       <summary>
-        <para>The editor that provides lookup functionality using a lightweight grid in a drop-down window.</para>
+        <para>An editor control that enables lookup functionality using a lightweight grid in a drop-down window.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.LookUpEdit.#ctor">
@@ -19170,6 +19215,17 @@ The FormatConditionAutomaticType.Default value is equivalent to FormatConditionA
     <member name="M:DevExpress.XtraEditors.LookUpEditBase.Refresh">
       <summary>
         <para>Forces the control to invalidate its client area and immediately redraw itself and any child controls.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraEditors.LookUpEditBase.ResetAutoSearch">
+      <summary>
+        <para>When this editor operates in AutoSearch Mode (the SearchMode property is set to “AutoSearch”), call this method to clear all cached suggestions and custom highlight regions.</para>
+      </summary>
+      <returns>true if suggestions and highlight regions were successfully cleared; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.XtraEditors.LookUpEditBase.ResetAutoSuggest">
+      <summary>
+        <para>When this editor operates in AutoSuggest Mode (the SearchMode property is set to “AutoSuggest”), call this method to clear all cached suggestions and custom highlight regions.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraEditors.LookUpEditBase.StartAutoSearch(System.String,System.Boolean)">
@@ -25704,7 +25760,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.DropDownRows">
       <summary>
-        <para>Gets or sets the number of rows simultaneously displayed in the dropdown window.</para>
+        <para>Gets or sets the height of the dropdown (in rows).</para>
       </summary>
       <value>The number of visible rows in the dropdown window.</value>
     </member>
@@ -28167,7 +28223,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.UseAdvancedMode">
       <summary>
-        <para>Switches the editor to Advanced Mode. This mode supports new caret and selection animations, emojis, and embedded labels. You can set up properties from the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.AdvancedModeOptions"/> group to choose which Advanced Mode features are enabled. To activate Advanced Mode for all TextEdit-based editors in your app, enable the static <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.UseAdvancedTextEdit"/> property.</para>
+        <para>Switches the editor to Advanced Mode. This mode supports new caret and selection animations, emojis, and embedded labels. You can set up properties from the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.AdvancedModeOptions"/> group to choose which Advanced Mode features are enabled.</para>
       </summary>
       <value>Specifies whether Advanced Mode is on. The Default value is identical to False.</value>
     </member>
@@ -28191,9 +28247,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.ValidateOnEnterKey">
       <summary>
-        <para>Gets or sets whether to invoke the <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItem.Validating"/> event when pressing the ENTER key.</para>
+        <para>Gets or sets whether to raise the <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItem.Validating"/> event on pressing the ENTER key.</para>
       </summary>
-      <value>true if the <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItem.Validating"/> event is raised when the ENTER key is pressed; otherwise, false.</value>
+      <value>true to raise the <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItem.Validating"/> event on pressing the ENTER key; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.XlsxFormatString">
       <summary>
@@ -28594,6 +28650,12 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
         <para>This property is not supported by the <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/> control.</para>
       </summary>
     </member>
+    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch.EditorToThumbWidthRatio">
+      <summary>
+        <para>Gets or sets the editor’s total width relative to the width of the editor’s thumb.</para>
+      </summary>
+      <value>The total width of the editor divided by the thumb width.</value>
+    </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch.EditorTypeName">
       <summary>
         <para>Gets the class name of the edit control corresponding to the current repository item.</para>
@@ -28643,6 +28705,12 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.</v
         <para>Gets or sets whether the text is visible.</para>
       </summary>
       <value>true if the text is visible; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch.ThumbWidth">
+      <summary>
+        <para>Gets or sets the width of the editor’s thumb (in pixels).</para>
+      </summary>
+      <value>The thumb width.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch.Toggled">
       <summary>

@@ -25816,6 +25816,12 @@
             <param name="graphicsObjects"></param>
             <param name="currentPage"></param>
         </member>
+        <member name="M:Spire.Pdf.General.Paper.Word.Utilities.ObjectConverter.TableInsertEmptyParagraph(Spire.Pdf.General.Paper.Word.DocumentElement.Page)">
+            <summary>
+            Insert empty paragraphs between tables
+            </summary>
+            <param name="currentPage"></param>
+        </member>
         <member name="M:Spire.Pdf.General.Paper.Word.Utilities.ObjectConverter.LayoutObjectByHorizontal">
             <summary>
             纵向布局所有对象
@@ -25878,10 +25884,11 @@
             <param name="image"></param>
             <param name="imageObject"></param>
         </member>
-        <member name="M:Spire.Pdf.General.Paper.Word.Utilities.ObjectConverter.GetEmptyParagraph">
+        <member name="M:Spire.Pdf.General.Paper.Word.Utilities.ObjectConverter.GetEmptyParagraph(System.Single)">
             <summary>
             创建一个空的段落
             </summary>
+            <param name="fontSize"></param>
             <returns></returns>
         </member>
         <member name="M:Spire.Pdf.General.Paper.Word.Utilities.ObjectConverter.GetEmptyText(System.Single)">
@@ -25905,13 +25912,6 @@
             <param name="text"></param>
             <param name="spaceString"></param>
             <param name="spaceSize"></param>
-        </member>
-        <member name="M:Spire.Pdf.General.Paper.Word.Utilities.ObjectConverter.GetTextSize(Spire.Pdf.Conversion.LogicStructure.Base.TextObject)">
-            <summary>
-            获取文本大小
-            </summary>
-            <param name="textObject"></param>
-            <returns></returns>
         </member>
         <member name="M:Spire.Pdf.General.Paper.Word.Utilities.ObjectConverter.GetSpaceString(System.Single,System.Single,System.Single)">
             <summary>
@@ -26229,6 +26229,13 @@
             </summary>
             <param name="stream"></param>
         </member>
+        <member name="M:Spire.Pdf.General.Paper.Word.Doc.Structures.SttbfFfn.GetMatchFontName(System.String)">
+            <summary>
+            匹配一个合适的字体名称
+            </summary>
+            <param name="fontName"></param>
+            <returns></returns>
+        </member>
         <member name="M:Spire.Pdf.General.Paper.Word.ToFlowDoucment.ApsRecognizer.PsNormalizer.IsHeyperlinkText(System.Drawing.RectangleF)">
             <summary>
             Whether the text inside the rectangle is the hyperlink text.
@@ -26452,6 +26459,32 @@
             </summary>
             <param name="fontDefinition"></param>
             <param name="fontReader"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Spire.Pdf.General.Paper.Font.TTF.Internals.TTFNameTable.NameRecordList.level">
+            <summary>
+            level==1: sort by platformID
+            level==2: sort by platformSpecificID
+            level==3: sort by languageID
+            level==4: sort by nameID
+            </summary>
+        </member>
+        <member name="M:Spire.Pdf.General.Paper.Font.TTF.Internals.TTFNameTable.NameRecordList.Sort">
+            <summary>
+            https://learn.microsoft.com/zh-cn/typography/opentype/spec/name
+            As with encoding records in the 'cmap' table, name records must be sorted first by platform ID, 
+            then by platform-specific ID, then by language ID, and then by name ID. 
+            Descriptions of the various IDs follow.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spire.Pdf.General.Paper.Font.TTF.Internals.TTFNameTable.NameRecordList.Sort(System.Collections.Generic.List{Spire.Pdf.General.Paper.Font.TTF.Internals.TTFNameTable.NameRecord},System.Int32,System.Collections.Generic.List{Spire.Pdf.General.Paper.Font.TTF.Internals.TTFNameTable.NameRecord})">
+            <summary>
+            Sort name table
+            </summary>
+            <param name="inputLists"></param>
+            <param name="level"></param>
+            <param name="newNameRecords"></param>
             <returns></returns>
         </member>
         <member name="M:Spire.Pdf.General.Paper.Font.TTF.TTCFontSource.GetFontDefinitions">
@@ -30192,6 +30225,12 @@
             Compress document.
             </summary>
             <param name="filePath">The out file path.</param>
+        </member>
+        <member name="M:Spire.Pdf.Conversion.Compression.PdfCompressor.CompressToStream(System.IO.Stream)">
+            <summary>
+            Compress the document to the specified stream.
+            </summary>
+            <param name="outStream">The out stream.</param>
         </member>
         <member name="T:Spire.Pdf.Conversion.DocxOptions">
             <summary>
@@ -49062,6 +49101,11 @@
             </summary>
             <value>The element</value>
         </member>
+        <member name="F:Spire.Pdf.Annotations.PdfFreeTextAnnotation.m_annotTextAlignment">
+            <summary>
+            Specifies the type of horizontal text alignment.
+            </summary>
+        </member>
         <member name="P:Spire.Pdf.Annotations.PdfFreeTextAnnotation.RectangleDifferences">
             <summary>
             Gets or sets the rectangular diffecences
@@ -49075,6 +49119,11 @@
         <member name="P:Spire.Pdf.Annotations.PdfFreeTextAnnotation.Subject">
             <summary>
             Gets or sets the annotation's subject.
+            </summary>
+        </member>
+        <member name="P:Spire.Pdf.Annotations.PdfFreeTextAnnotation.TextAlignment">
+            <summary>
+            Specifies the type of horizontal text alignment.
             </summary>
         </member>
         <member name="M:Spire.Pdf.Annotations.PdfFreeTextAnnotation.WriteAp(Spire.Pdf.Primitives.PdfDictionary)">
@@ -51166,6 +51215,26 @@
         <member name="F:Spire.Pdf.Annotations.PdfPolyLineIntent.PolyLineDimension">
             <summary>
             Indicates that the annotaiton is intended to function as dimension
+            </summary>
+        </member>
+        <member name="T:Spire.Pdf.Annotations.PdfAnnotationTextAlignment">
+            <summary>
+            Specifies the type of horizontal text alignment.
+            </summary>
+        </member>
+        <member name="F:Spire.Pdf.Annotations.PdfAnnotationTextAlignment.Left">
+            <summary>
+            Specifies the text is aligned to Left.
+            </summary>
+        </member>
+        <member name="F:Spire.Pdf.Annotations.PdfAnnotationTextAlignment.Center">
+            <summary>
+            Specifies the text is aligned to Center.
+            </summary>
+        </member>
+        <member name="F:Spire.Pdf.Annotations.PdfAnnotationTextAlignment.Right">
+            <summary>
+            Specifies the text is aligned to Right.
             </summary>
         </member>
         <member name="T:Spire.Pdf.Annotations.PdfAnnotation">
@@ -58519,6 +58588,14 @@
             <summary>
             Gets the items collection.
             </summary>
+        </member>
+        <member name="M:Spire.Pdf.Widget.PdfStateFieldWidget.DrawStateItem(Spire.Pdf.Graphics.PdfCanvas,Spire.Pdf.Primitives.PdfName,Spire.Pdf.Widget.PdfStateWidgetItem)">
+            <summary>
+             Draws the check box item.
+            </summary>
+            <param name="graphics">The graphics.</param>
+            <param name="vName">The vName.</param>
+            <param name="widgetItem">The item.</param>
         </member>
         <member name="T:Spire.Pdf.Widget.PdfStateWidgetItem">
             <summary>

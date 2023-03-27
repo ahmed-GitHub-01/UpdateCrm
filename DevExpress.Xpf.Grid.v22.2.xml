@@ -3752,7 +3752,7 @@
         <para>Collapses the detail section for the specified row.</para>
       </summary>
       <param name="rowHandle">An integer value identifying the row by its handle.</param>
-      <param name="descriptor">Optional. A <see cref="T:DevExpress.Xpf.Grid.DetailDescriptorBase"/> object specifying the detail. This parameter is not used and defaults to null (Nothing in Visual Basic). Use the CollapseMasterRow method with only the rowHandle parameter.</param>
+      <param name="descriptor">A <see cref="T:DevExpress.Xpf.Grid.DetailDescriptorBase"/> object specifying the detail.</param>
     </member>
     <member name="P:DevExpress.Xpf.Grid.GridControl.Columns">
       <summary>
@@ -3996,7 +3996,7 @@
         <para>Expands the specified master row and, optionally, shows the specified Detail.</para>
       </summary>
       <param name="rowHandle">An integer value specifying the master row by its handle. If the specified row handle is invalid, the method does nothing.</param>
-      <param name="descriptor">Optional. A <see cref="T:DevExpress.Xpf.Grid.DetailDescriptorBase"/> object specifying the detail to be shown. If the specified object doesn’t represent the specified row’s detail, the method expands the first or previously visible detail, depending on whether the current row was previously expanded.</param>
+      <param name="descriptor">A <see cref="T:DevExpress.Xpf.Grid.DetailDescriptorBase"/> object specifying the detail to be shown. If the specified object doesn’t represent the specified row’s detail, the method expands the first or previously visible detail, depending on whether the current row was previously expanded.</param>
     </member>
     <member name="M:DevExpress.Xpf.Grid.GridControl.FindRowByValueAsync(DevExpress.Xpf.Grid.ColumnBase,System.Object)">
       <summary>
@@ -4462,7 +4462,7 @@
         <para>Determines the specified master row’s expanded state and, optionally, the specified Detail’s visibility.</para>
       </summary>
       <param name="rowHandle">An integer value specifying the master row by its value. If an invalid row handle is specified, the method returns false.</param>
-      <param name="descriptor">Optional. A <see cref="T:DevExpress.Xpf.Grid.DetailDescriptorBase"/> descendant specifying the detail view whose visibility needs to be checked. If the master row is expanded but a different detail is currently visible, the method returns false. The same happens if you pass an object that doesn’t represent the specified master row’s detail.</param>
+      <param name="descriptor">A <see cref="T:DevExpress.Xpf.Grid.DetailDescriptorBase"/> descendant specifying the detail view whose visibility needs to be checked. If the master row is expanded but a different detail is currently visible, the method returns false. The same happens if you pass an object that doesn’t represent the specified master row’s detail.</param>
       <returns>true if the specified master row is expanded and the specified detail is visible; otherwise, false.</returns>
     </member>
     <member name="P:DevExpress.Xpf.Grid.GridControl.IsRecursiveExpand">
@@ -4605,7 +4605,7 @@
       </summary>
       <param name="rowHandle">An integer value specifying the master row by its handle.</param>
       <param name="expand">true to expand the specified row; false to collapse it.</param>
-      <param name="descriptor">Optional. A <see cref="T:DevExpress.Xpf.Grid.DetailDescriptorBase"/> object specifying the detail section to be made visible when expanding a master row. If the specified object doesn’t represent a detail for the specified master row, then this parameter is ignored. The same happens if you pass null (Nothing in Visual Basic).</param>
+      <param name="descriptor">A <see cref="T:DevExpress.Xpf.Grid.DetailDescriptorBase"/> object specifying the detail section to be made visible when expanding a master row. If the specified object doesn’t represent a detail for the specified master row, then this parameter is ignored. The same happens if you pass null (Nothing in Visual Basic).</param>
     </member>
     <member name="M:DevExpress.Xpf.Grid.GridControl.SortBy(DevExpress.Xpf.Grid.GridColumn,DevExpress.Data.ColumnSortOrder,System.Int32)">
       <summary>
@@ -7802,9 +7802,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TableView.AllowBandMoving">
       <summary>
-        <para>Gets or sets whether an end user is allowed to rearrange bands. This is a dependency property.</para>
+        <para>Gets or sets whether users can rearrange bands. This is a dependency property.</para>
       </summary>
-      <value>true, to allow rearranging bands; otherwise, false.</value>
+      <value>true to allow users to rearrange bands; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TableView.AllowBandMovingProperty">
       <summary>
@@ -7814,9 +7814,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TableView.AllowBandMultiRow">
       <summary>
-        <para>Gets or sets whether the grid displays each data record on a single row when using bands.</para>
+        <para>Gets or sets whether the grid displays each band’s column in a single row. This is a dependency property.</para>
       </summary>
-      <value>false, to make the grid display each data record on a single row when using bands; otherwise, true.</value>
+      <value>false to display each band’s column in a single row; otherwise, true.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TableView.AllowBandMultiRowProperty">
       <summary>
@@ -7826,9 +7826,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TableView.AllowBandResizing">
       <summary>
-        <para>Gets or sets whether an end-user can change band widths by dragging the edges of their headers.</para>
+        <para>Gets or sets whether users can drag the band header’s edge to change the band‘s width.</para>
       </summary>
-      <value>true, to allow an end-user to change band widths; otherwise, false.</value>
+      <value>true to allow users to change band widths; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TableView.AllowBandResizingProperty">
       <summary>
@@ -7874,9 +7874,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TableView.AllowChangeBandParent">
       <summary>
-        <para>Gets or sets whether an end-user is allowed to change the band’s parent band. This is a dependency property.</para>
+        <para>Gets or sets whether users can drag bands between bands. This is a dependency property.</para>
       </summary>
-      <value>true, to allow changing the parent band; otherwise, false.</value>
+      <value>true to allow users to drag bands between bands; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TableView.AllowChangeBandParentProperty">
       <summary>
@@ -7886,9 +7886,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TableView.AllowChangeColumnParent">
       <summary>
-        <para>Gets or sets whether an end-user is allowed to change a column’s parent band. This is a dependency property.</para>
+        <para>Gets or sets whether users can drag columns between bands. This is a dependency property.</para>
       </summary>
-      <value>true, to allow changing a column’s parent band; otherwise, false.</value>
+      <value>true to allow users to drag columns between bands; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TableView.AllowChangeColumnParentProperty">
       <summary>
@@ -8216,9 +8216,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TableView.BandHeaderTemplate">
       <summary>
-        <para>Gets or sets the template that defines the presentation of band headers. This is a dependency property.</para>
+        <para>Gets or sets the template that defines the appearance of band headers. This is a dependency property.</para>
       </summary>
-      <value>A <see cref="T:System.Windows.DataTemplate"/> object that defines the presentation of band headers.</value>
+      <value>A <see cref="T:System.Windows.DataTemplate"/> object that defines the appearance of band headers.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TableView.BandHeaderTemplateProperty">
       <summary>
@@ -10175,7 +10175,7 @@ If the value is null, the rows number is 20.</value>
       <summary>
         <para>Gets or sets whether to display the bands panel.</para>
       </summary>
-      <value>true, to display the bands panel; otherwise, false.</value>
+      <value>true to display the bands panel; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TableView.ShowBandsPanelProperty">
       <summary>
@@ -12986,9 +12986,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TreeListView.AllowBandMoving">
       <summary>
-        <para>Gets or sets whether an end user is allowed to rearrange bands. This is a dependency property.</para>
+        <para>Gets or sets whether users can rearrange bands. This is a dependency property.</para>
       </summary>
-      <value>true, to allow rearranging bands; otherwise, false.</value>
+      <value>true to allow users to rearrange bands; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TreeListView.AllowBandMovingProperty">
       <summary>
@@ -12998,9 +12998,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TreeListView.AllowBandMultiRow">
       <summary>
-        <para>Gets or sets whether the grid displays each data record on a single row when using bands.</para>
+        <para>Gets or sets whether the grid displays each band’s column in a single row. This is a dependency property.</para>
       </summary>
-      <value>false, to make the grid display each data record on a single row when using bands; otherwise, true.</value>
+      <value>false to display each band’s column in a single row; otherwise, true.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TreeListView.AllowBandMultiRowProperty">
       <summary>
@@ -13010,9 +13010,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TreeListView.AllowBandResizing">
       <summary>
-        <para>Gets or sets whether an end-user can change band widths by dragging the edges of their headers.</para>
+        <para>Gets or sets whether users can drag the band header’s edge to change the band‘s width.</para>
       </summary>
-      <value>true, to allow an end-user to change band widths; otherwise, false.</value>
+      <value>true to allow users to change band widths; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TreeListView.AllowBandResizingProperty">
       <summary>
@@ -13046,9 +13046,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TreeListView.AllowChangeBandParent">
       <summary>
-        <para>Gets or sets whether an end-user is allowed to change the band’s parent band. This is a dependency property.</para>
+        <para>Gets or sets whether users can drag bands between bands. This is a dependency property.</para>
       </summary>
-      <value>true, to allow changing the parent band; otherwise, false.</value>
+      <value>true to allow users to drag bands between bands; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TreeListView.AllowChangeBandParentProperty">
       <summary>
@@ -13058,9 +13058,9 @@ If the value is null, the rows number is 20.</value>
     </member>
     <member name="P:DevExpress.Xpf.Grid.TreeListView.AllowChangeColumnParent">
       <summary>
-        <para>Gets or sets whether an end-user is allowed to change a column’s parent band. This is a dependency property.</para>
+        <para>Gets or sets whether users can drag columns between bands. This is a dependency property.</para>
       </summary>
-      <value>true, to allow changing a column’s parent band; otherwise, false.</value>
+      <value>true to allow users to drag columns between bands; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.Xpf.Grid.TreeListView.AllowChangeColumnParentProperty">
       <summary>

@@ -513,7 +513,7 @@
     </member>
     <member name="F:DevExpress.XtraScheduler.Reporting.PrintColorSchema.FullColor">
       <summary>
-        <para>Prints Scheduler elements in full color.</para>
+        <para>Prints Scheduler elements in full color. Appointment colors are taken into account only for appointments colorized by labels. Custom colors set on the <see cref="E:DevExpress.XtraScheduler.SchedulerControl.AppointmentViewInfoCustomizing"/> and custom draw events are ignored.</para>
         <para />
       </summary>
     </member>

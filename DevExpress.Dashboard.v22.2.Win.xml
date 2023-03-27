@@ -1368,6 +1368,12 @@
         <para>Allows you to validate a custom SQL query of the <see cref="T:DevExpress.DashboardCommon.DashboardSqlDataSource"/> in asynchronous mode.</para>
       </summary>
     </member>
+    <member name="P:DevExpress.DashboardWin.DashboardDesigner.BackColor">
+      <summary>
+        <para>Gets or sets the control’s background color.</para>
+      </summary>
+      <value>A <see cref="T:System.Drawing.Color"/> structure that specifies the control’s background color in ARGB.</value>
+    </member>
     <member name="P:DevExpress.DashboardWin.DashboardDesigner.BarAndDockingController">
       <summary>
         <para>Gets or sets the BarAndDockingController that will provide default appearance options for the <see cref="T:DevExpress.DashboardWin.DashboardDesigner"/>‘s elements.</para>

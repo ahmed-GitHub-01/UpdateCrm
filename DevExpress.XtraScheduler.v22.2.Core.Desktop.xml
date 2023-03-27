@@ -249,7 +249,7 @@
       <summary>
         <para>Gets or sets whether an appointment should change its height to fit the text to display.</para>
       </summary>
-      <value>true if an appointment’s height is changed automatically to fit the text; otherwise, false.</value>
+      <value>true to enable auto-height; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraScheduler.AppointmentDisplayOptions.AppointmentHeight">
       <summary>

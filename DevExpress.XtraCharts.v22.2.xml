@@ -7130,6 +7130,12 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
       </summary>
       <value>true to dispose the legend check box image settings; otherwise, false.</value>
     </member>
+    <member name="P:DevExpress.XtraCharts.CustomDrawSeriesEventArgs.LegendCheckBoxDXImage">
+      <summary>
+        <para>Gets or sets the image of the legend item check box of the series or series point that is currently being painted.</para>
+      </summary>
+      <value>The image of the legend item marker.</value>
+    </member>
     <member name="P:DevExpress.XtraCharts.CustomDrawSeriesEventArgs.LegendCheckBoxImage">
       <summary>
         <para>Gets or sets the image of the legend item check box of the series or series point that is currently being painted.</para>
@@ -20929,6 +20935,12 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraCharts.Sankey.SankeyTextElement"/> class with specified settings.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraCharts.Sankey.SankeyTextElement.DXFont">
+      <summary>
+        <para>Gets or sets the font that is used to display text.</para>
+      </summary>
+      <value>A font that is used to display text.</value>
     </member>
     <member name="P:DevExpress.XtraCharts.Sankey.SankeyTextElement.Font">
       <summary>

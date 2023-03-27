@@ -3412,6 +3412,12 @@
       </summary>
       <value>true to sort form field items; otherwise, false.</value>
     </member>
+    <member name="P:DevExpress.Pdf.PdfChoiceFormFieldFacade`1.TextJustification">
+      <summary>
+        <para>Gets or sets how the text is aligned in the form field.</para>
+      </summary>
+      <value>Indicates the text justification type.</value>
+    </member>
     <member name="T:DevExpress.Pdf.PdfCircleAnnotationFacade">
       <summary>
         <para>Exposes members used to organize circle annotations without access to their inner structure.</para>
@@ -10637,6 +10643,12 @@
       </summary>
       <value>true to enable spell check; otherwise, false.</value>
     </member>
+    <member name="P:DevExpress.Pdf.PdfTextFormFieldFacade.TextJustification">
+      <summary>
+        <para>Gets or sets how the text is aligned in the form field.</para>
+      </summary>
+      <value>Indicates the text justification type.</value>
+    </member>
     <member name="P:DevExpress.Pdf.PdfTextFormFieldFacade.Type">
       <summary>
         <para>Gets the form field type.</para>
@@ -11368,6 +11380,12 @@
         <para>Gets or sets the widget’s rotation angle. The widget is rotated counterclockwise.</para>
       </summary>
       <value>The degree of rotation (from 0 to 360) in multiples of 90.</value>
+    </member>
+    <member name="P:DevExpress.Pdf.PdfWidgetFacade.TextJustification">
+      <summary>
+        <para>Gets or sets how the text is aligned in the widget.</para>
+      </summary>
+      <value>Indicates the text justification type.</value>
     </member>
     <member name="P:DevExpress.Pdf.PdfWidgetFacade.WordSpacing">
       <summary>

@@ -7643,6 +7643,12 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
       <param name="template">The HTML markup to assign to the <see cref="P:DevExpress.Utils.Html.HtmlTemplate.Template"/> property.</param>
       <param name="styles">The CSS code to assign to the <see cref="P:DevExpress.Utils.Html.HtmlTemplate.Styles"/> property.</param>
     </member>
+    <member name="M:DevExpress.Utils.Html.HtmlTemplate.ShouldSerialize">
+      <summary>
+        <para>This member supports the internal infrastructure, and is not intended to be used directly in your code.</para>
+      </summary>
+      <returns />
+    </member>
     <member name="P:DevExpress.Utils.Html.HtmlTemplate.Styles">
       <summary>
         <para>Gets or sets the template’s CSS code that specifies the appearance settings, size, padding, and layout options of UI elements.</para>
@@ -14810,13 +14816,13 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.BorderStyles.Flat">
       <summary>
-        <para>Borders are flat.</para>
+        <para>Deprecated. Borders are flat.</para>
         <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.BorderStyles.HotFlat">
       <summary>
-        <para>Flat border. The border and the client area are highlighted when the cursor hovers the editor.</para>
+        <para>Deprecated. Flat border. The border and the client area are highlighted when the cursor hovers the editor.</para>
         <para />
         <para />
       </summary>
@@ -14829,7 +14835,7 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.BorderStyles.Office2003">
       <summary>
-        <para>Office 2003-style border.</para>
+        <para>Deprecated. Office 2003-style border.</para>
         <para />
       </summary>
     </member>
@@ -14841,13 +14847,13 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.BorderStyles.Style3D">
       <summary>
-        <para>Three-dimensional border.</para>
+        <para>Deprecated. Three-dimensional border.</para>
         <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat">
       <summary>
-        <para>Flat border in the Office XP style. Border and the client area are highlighted when the mouse pointer hovers the editor; otherwise, no border.</para>
+        <para>Deprecated. Flat border in the Office XP style. Border and the client area are highlighted when the mouse pointer hovers the editor; otherwise, no border.</para>
         <para />
         <para />
       </summary>
@@ -15166,6 +15172,12 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
         <para>Returns the client area container that hosts form’s child controls.</para>
       </summary>
       <value>The client area container of this form.</value>
+    </member>
+    <member name="P:DevExpress.XtraEditors.DirectXFormBase.ForceDirectX">
+      <summary>
+        <para>Gets or sets whether the DirectX Hardware Acceleration should be enabled for this form and its child controls.</para>
+      </summary>
+      <value>Specifies whether this form should utilize the DirectX Hardware Accelleration. The DefaultBoolean.Default value is equivalent to DefaultBoolean.True.</value>
     </member>
     <member name="E:DevExpress.XtraEditors.DirectXFormBase.HtmlElementMouseClick">
       <summary>
@@ -17936,9 +17948,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.DragScrollThumbBeyondControlThreshold">
       <summary>
-        <para>Gets or sets the threshold, in pixels, beyond which the previous scroll bar thumb position is restored. This property is in effect in the RestoreThumbPosition mode. This is a static property.</para>
+        <para>Gets or sets the threshold, in pixels, beyond which the previous vertical scroll bar thumb position is restored. This property is in effect in the RestoreThumbPosition mode. This is a static property.</para>
       </summary>
-      <value>An integer value that specifies the threshold, in pixels, beyond which the previous scroll bar thumb position is restored. The default value is 50 pixels.</value>
+      <value>An integer value that specifies the threshold, in pixels, beyond which the previous vertical scroll bar thumb position is restored. The default value is 50 pixels.</value>
     </member>
     <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.EnableFormSkins">
       <summary>
@@ -18177,7 +18189,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.ScrollUIMode">
       <summary>
-        <para>Gets or sets whether scroll bars are optimized for desktop or touch applications. This is a static (Shared in VB.NET) property.</para>
+        <para>Gets or sets whether scroll bars are optimized for desktop or touch applications. This is a static (Shared in VB.NET) property. Set this property at application startup.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraEditors.ScrollUIMode"/> enumeration value that specifies how scroll bars are displayed.</value>
     </member>

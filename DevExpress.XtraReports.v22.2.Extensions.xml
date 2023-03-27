@@ -1725,22 +1725,22 @@
     </member>
     <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.KeySizeHeightDecrease">
       <summary>
-        <para>Decreases the selected control’s height when users press the Shift+Up Arrow keys. The decrease depends on the report’s <see cref="P:DevExpress.XtraReports.UI.XtraReport.SnappingMode"/> property value: * None - decreases the height by the <see cref="P:DevExpress.XtraReports.UI.XtraReport.ReportUnit"/> value; * SnapLines - decreases the height to the nearest snap position; * SnapGrid - decreases the height to the nearest grid line; * SnapToGridAndSnapLines - decreases the height to the nearest grid line or snap position. If you hide this command, users can still decrease the controls height with the Shift+Up Arrow keys.</para>
+        <para>Decreases the height of the selected control when you press Shift + Up Arrow. The decrease depends on the value of the <see cref="P:DevExpress.XtraReports.UI.XtraReport.SnappingMode"/> report property. If you hide this command, users can still decrease the height of controls with the Shift + Up Arrow keys.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.KeySizeHeightIncrease">
       <summary>
-        <para>Increases the selected control’s height when users press the Shift+Down Arrow keys. The increase depends on the report’s <see cref="P:DevExpress.XtraReports.UI.XtraReport.SnappingMode"/> property value: * None - increases the height by the <see cref="P:DevExpress.XtraReports.UI.XtraReport.ReportUnit"/> value; * SnapLines - increases the height to the nearest snap position; * SnapGrid - increases the height to the nearest grid line; * SnapToGridAndSnapLines - increases the height to the nearest grid line or snap position. If you hide this command, users can still increase the controls height with the Shift+Down Arrow keys.</para>
+        <para>Increases the height of the selected control when you press Shift + Down Arrow. The increase depends on the value of the <see cref="P:DevExpress.XtraReports.UI.XtraReport.SnappingMode"/> report property. If you hide this command, users can still increase the height of controls with the Shift + Down Arrow keys.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.KeySizeWidthDecrease">
       <summary>
-        <para>Decreases the selected control’s width when users press the Shift+Left Arrow keys. The decrease depends on the report’s <see cref="P:DevExpress.XtraReports.UI.XtraReport.SnappingMode"/> property value: * None - decreases the width by the <see cref="P:DevExpress.XtraReports.UI.XtraReport.ReportUnit"/> value; * SnapLines - decreases the width to the nearest snap position; * SnapGrid - decreases the width to the nearest grid line; * SnapToGridAndSnapLines - decreases the width to the nearest grid line or snap position. If you hide this command, users can still decrease the controls’ width with the Shift+Left Arrow keys.</para>
+        <para>Decreases the width of the selected control when you press Shift + Left Arrow. The decrease depends on the value of the <see cref="P:DevExpress.XtraReports.UI.XtraReport.SnappingMode"/> report property. If you hide this command, users can still decrease the width of controls with the Shift + Left Arrow keys.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.KeySizeWidthIncrease">
       <summary>
-        <para>Increases the selected control’s width when users press the Shift+Right Arrow keys. The increase depends on the report’s <see cref="P:DevExpress.XtraReports.UI.XtraReport.SnappingMode"/> property value: * None - increases the width by the <see cref="P:DevExpress.XtraReports.UI.XtraReport.ReportUnit"/> value; * SnapLines - increases the width to the nearest snap position; * SnapGrid - increases the width to the nearest grid line; * SnapToGridAndSnapLines - increases the width to the nearest grid line or snap position. If you hide this command, users can still increase the controls’ width with the Shift+Right Arrow keys.</para>
+        <para>Increases the width of the selected control when you press Shift + Right Arrow. The increase depends on the value of the <see cref="P:DevExpress.XtraReports.UI.XtraReport.SnappingMode"/> report property. If you hide this command, users can still increase the width of controls with the Shift + Right Arrow keys.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.LabelAutoWidth">

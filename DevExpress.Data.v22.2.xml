@@ -9485,17 +9485,17 @@
     </member>
     <member name="F:DevExpress.Utils.DefaultBoolean.Default">
       <summary>
-        <para>The default behavior determined by the control’s logic.</para>
+        <para>The value is specified by a global option or a higher-level object.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Utils.DefaultBoolean.False">
       <summary>
-        <para>false. DefaultBoolean.False has a constant value of 1, while the standard false value corresponds to a value of 0. In Visual Basic, do not use implicit conversion of Boolean values to DefaultBoolean, and vice versa, as the conversion may produce incorrect results.</para>
+        <para>The value is false.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Utils.DefaultBoolean.True">
       <summary>
-        <para>true. DefaultBoolean.True has a constant value of 0, while the standard true value corresponds to a value of 1. In Visual Basic, do not use implicit conversion of Boolean values to DefaultBoolean, and vice versa, as the conversion may produce incorrect results.</para>
+        <para>The value is true.</para>
       </summary>
     </member>
     <member name="T:DevExpress.Utils.DXCollection`1">
@@ -14563,17 +14563,13 @@
     </member>
     <member name="F:DevExpress.XtraGrid.ColumnSortMode.Custom">
       <summary>
-        <para>Enables custom sorting of a column’s data. To implement custom sorting, handle the <see cref="E:DevExpress.XtraGrid.Views.Base.ColumnView.CustomColumnSort"/> event in the GridControl, and the <see cref="E:DevExpress.XtraTreeList.TreeList.CompareNodeValues"/> event in the TreeList.</para>
-        <para>In the GridControl, the Custom mode also enables custom grouping of rows when grouping is applied against the current column. To implement custom grouping, handle the <see cref="E:DevExpress.XtraGrid.Views.Grid.GridView.CustomColumnGroup"/> event.</para>
+        <para>Applies sort options specified in the CustomColumnSort event handler.</para>
+        <para>In data grids, this mode also applies group options from the CustomColumnGroup event handler.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraGrid.ColumnSortMode.Default">
       <summary>
-        <para>Sorts the column’s data according to the type of the editor assigned to the column.</para>
-        <para />
-        <para>The Default option is equivalent to DisplayText for columns that use <see cref="T:DevExpress.XtraEditors.LookUpEdit"/>, <see cref="T:DevExpress.XtraEditors.ImageComboBoxEdit"/> and HypertextLabel (<see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel"/>) in&#0045;place editors.</para>
-        <para />
-        <para>The Default option is equivalent to Value for other columns. Note that for certain editors (<see cref="T:DevExpress.XtraEditors.TextEdit"/>, <see cref="T:DevExpress.XtraEditors.ComboBoxEdit"/>, etc) the edit values match the display values.</para>
+        <para>Switches between DisplayText and Value modes based on the column editor’s type.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraGrid.ColumnSortMode.DisplayText">
@@ -19426,10 +19422,44 @@
         <para>When the brick dimensions do not fit into the right page margin, the brick content is moved to a new page in its entirety.</para>
       </summary>
     </member>
+    <member name="N:DevExpress.XtraReports.Configuration">
+      <summary>
+        <para>Settings to configure the Reporting UI components.</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraReports.Configuration.DataSourceSettings">
+      <summary>
+        <para>Contains settings that configure the user interface related to the data sources in the Report Designer.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraReports.Configuration.DataSourceSettings.#ctor">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Configuration.DataSourceSettings"/> class.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraReports.Configuration.DataSourceSettings.AllowAddDataSource">
+      <summary>
+        <para>Hides the UI element that allows a user to remove the data source from the Web End-User Report Designer in the Field List.</para>
+      </summary>
+      <value>true to show the UI element that allows a user to remove the data source from the Web End-User Report Designer in the Field List; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraReports.Configuration.DataSourceSettings.AllowEditDataSource">
+      <summary>
+        <para>Hides UI elements that allow the user to edit the data source and queries in the Field List.</para>
+      </summary>
+      <value>true to show UI elements that allow the user to edit the data source and queries in the Field List; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraReports.Configuration.DataSourceSettings.AllowRemoveDataSource">
+      <summary>
+        <para>Hides the UI element that allows a user to remove the data source from the Web End-User Report Designer in the Field List.</para>
+      </summary>
+      <value>true to show the UI element that allows a user to remove the data source from the Web End-User Report Designer in the Field List; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.XtraReports.Configuration.DataSourceSettings.Assign(DevExpress.XtraReports.Configuration.DataSourceSettings)">
+      <summary>
+        <para>Copies all the settings from the <see cref="T:DevExpress.XtraReports.Configuration.DataSourceSettings"/> object passed as the parameter.</para>
+      </summary>
+      <param name="source">A <see cref="T:DevExpress.XtraReports.Configuration.DataSourceSettings"/> object whose settings are assigned to the current object.</param>
     </member>
     <member name="N:DevExpress.XtraReports.Design">
       <summary>
@@ -19579,9 +19609,46 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportDesignerRequestOptions"/> class.</para>
       </summary>
     </member>
+    <member name="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings">
+      <summary>
+        <para>Contains settings that apply to the Report Designer Preview.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings.#ctor">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings"/> class.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings.Assign(DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings)">
+      <summary>
+        <para>Copies the settings from the specified <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings"/> object to the current object.</para>
+      </summary>
+      <param name="source">A <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings"/> object whose settings are assigned to the current object.</param>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.ReportPreviewSettings.ExportSettings">
+      <summary>
+        <para>Allows you to specify settings that apply to print and export operations.</para>
+      </summary>
+      <value>A class that contains settings that apply to print and export operations.</value>
+    </member>
+    <member name="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility">
+      <summary>
+        <para>Lists settings that specify the visibility of the search box on the  Report Wizard’s Select Report Type page.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility.Always">
+      <summary>
+        <para>The search box is always displayed.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility.Auto">
+      <summary>
+        <para>The search box is displayed automatically depending on the number of report items shown.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility.Never">
+      <summary>
+        <para>The search box is always hidden.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings">
@@ -19614,15 +19681,21 @@
     </member>
     <member name="P:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings.EnableObjectDataSource">
       <summary>
-        <para>Allows you to hide the Object data source option and related pages in the Data Source Wizard.</para>
+        <para>Allows you to hide the Object Data Source option and related pages in the Data Source Wizard.</para>
       </summary>
-      <value>true to enable the Object data source option; otherwise, false.</value>
+      <value>true to enable the Object Data Source option; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings.EnableSqlDataSource">
+      <summary>
+        <para>Allows you to hide the Database option and related pages in the Data Source Wizard.</para>
+      </summary>
+      <value>true to enable the Database option; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings.ReportWizardTemplatesSearchBoxVisibility">
       <summary>
         <para>Specifies whether to display the search box on the Select Report Type page.</para>
       </summary>
-      <value>The <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility"/> enumeration member that specifies whether to display the report template seaerch box.</value>
+      <value>The <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.SearchBoxVisibility"/> enumeration member that specifies whether to display the report template search box.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings.UseFullscreenWizard">
       <summary>
@@ -19636,6 +19709,11 @@
       </summary>
       <value>true, to use the master-detail Report Wizard version; false, to use the legacy Report Wizard version.</value>
     </member>
+    <member name="T:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase">
+      <summary>
+        <para>Contains settings for the Web Report Designer model.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase.#ctor">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase"/> class.</para>
@@ -19647,11 +19725,29 @@
       </summary>
       <value>True to allow the user to close all reports; false if a single report remains.</value>
     </member>
+    <member name="M:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase.Assign(DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase)">
+      <summary>
+        <para>Copies the settings from the specified <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase"/> object to the current object.</para>
+      </summary>
+      <param name="settings">A <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase"/> object whose settings are assigned to the current object.</param>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase.DataSourceSettings">
+      <summary>
+        <para>Specifies settings that configure the user interface related to the data sources in the Report Designer.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraReports.Configuration.DataSourceSettings"/> object that contains settings for UI configuration related to the data sources in the Report Designer.</value>
+    </member>
     <member name="P:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase.RightToLeft">
       <summary>
         <para>Enables or disables a right-to-left layout in the Web Report Designer user interface.</para>
       </summary>
       <value>true to enable the right-to-left layout in the Report Designer UI; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerSettingsBase.WizardSettings">
+      <summary>
+        <para>Provides access to the Report Wizard settings.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardSettings"/> object that contains the Report Wizard settings.</value>
     </member>
     <member name="N:DevExpress.XtraReports.Web.WebDocumentViewer">
       <summary>
@@ -19672,6 +19768,12 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings"/> class.</para>
       </summary>
+    </member>
+    <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings.Assign(DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings)">
+      <summary>
+        <para>Copies the settings from the specified <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings"/> object to the current object.</para>
+      </summary>
+      <param name="settings">A <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings"/> object whose settings are assigned to the current object.</param>
     </member>
     <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts.ExportSettings.ShowPrintNotificationDialog">
       <summary>
@@ -19818,6 +19920,23 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerControlSettings"/> class.</para>
       </summary>
+    </member>
+    <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerSettingsBase">
+      <summary>
+        <para>Base class for the Web Document Viewer control settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerSettingsBase.AccessibilityCompliant">
+      <summary>
+        <para>Enables accessibility mode.</para>
+      </summary>
+      <value>True to enable accessibility mode; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerSettingsBase.ExportSettings">
+      <summary>
+        <para>Allows you to specify settings that apply to print and export operations.</para>
+      </summary>
+      <value>A class that contains settings that apply to print and export operations.</value>
     </member>
     <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerSettingsBase.RightToLeft">
       <summary>

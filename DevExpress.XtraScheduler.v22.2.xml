@@ -5807,6 +5807,11 @@
         <para>Enables resource headers to be painted manually.</para>
       </summary>
     </member>
+    <member name="E:DevExpress.XtraScheduler.SchedulerControl.CustomDrawTabHeader">
+      <summary>
+        <para>Allows you to paint resource tab headers.</para>
+      </summary>
+    </member>
     <member name="E:DevExpress.XtraScheduler.SchedulerControl.CustomDrawTimeCell">
       <summary>
         <para>Allows you to manually paint time cells.</para>
@@ -9711,7 +9716,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraScheduler.UI.WeekDaysCheckEdit.WeekDays">
       <summary>
-        <para>Gets or sets the day of the week or a specific group of days that is selected in the editor.</para>
+        <para>Gets or sets the day of the week or a specific group of days that is selected in the WeekDaysCheckEdit control.</para>
       </summary>
       <value>The <see cref="T:DevExpress.XtraScheduler.WeekDays"/> enumeration value specifying the day/days in a week.</value>
     </member>

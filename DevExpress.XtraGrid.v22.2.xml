@@ -2766,7 +2766,7 @@ If this parameter has a value (it’s not null or an empty string) the val param
     </member>
     <member name="T:DevExpress.XtraGrid.GridControl">
       <summary>
-        <para>Displays data from a data source in various formats (Views): Tabular, Banded Tabular, Cards, Windows UI-inspired Tiles and MS Windows Explorer-inspired UI.</para>
+        <para>Displays data from a data source in various formats (Views): Tabular, Banded Tabular, Cards, Windows UI-inspired Tiles, and Windows Explorer-inspired UI.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraGrid.GridControl.#ctor">
@@ -2795,9 +2795,9 @@ If this parameter has a value (it’s not null or an empty string) the val param
     </member>
     <member name="P:DevExpress.XtraGrid.GridControl.AllowRestoreSelectionAndFocusedRow">
       <summary>
-        <para>Gets or sets whether to preserve the focused row and selection after sorting, grouping or filtering.</para>
+        <para>Gets or sets whether to preserve the focused row and selection after sorting, grouping or filtering in Server and Instant Feedback modes.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value that specifies whether the focused row and selection are restored after sorting, grouping or filtering.</value>
+      <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value that specifies whether the focused row and selection are restored after sorting, grouping or filtering in Server and Instant Feedback modes.</value>
     </member>
     <member name="F:DevExpress.XtraGrid.GridControl.AutoFilterRowHandle">
       <summary>
@@ -2834,9 +2834,9 @@ If this parameter has a value (it’s not null or an empty string) the val param
     </member>
     <member name="P:DevExpress.XtraGrid.GridControl.ContextMenuStrip">
       <summary>
-        <para>Gets or sets a <see cref="T:System.Windows.Forms.ContextMenuStrip"/> object associated with the grid control.</para>
+        <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
-      <value>A <see cref="T:System.Windows.Forms.ContextMenuStrip"/> object associated with the grid control.</value>
+      <value>A <see cref="T:System.Windows.Forms.ContextMenuStrip"/> object.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.GridControl.Controls">
       <summary>
@@ -5161,6 +5161,11 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     <member name="F:DevExpress.XtraGrid.Views.BandedGrid.BandedGridState.GroupPanelFindPanelButtonPressed">
       <summary>
         <para>The Find button in the group panel is pressed.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraGrid.Views.BandedGrid.BandedGridState.HeaderSearchEditing">
+      <summary>
+        <para>The user types within the column header (in column header search). See <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsFilter.InHeaderSearchMode"/>.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraGrid.Views.BandedGrid.BandedGridState.IncrementalSearch">
@@ -7499,7 +7504,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.BaseView.ZoomView">
       <summary>
-        <para>Maximizes the current detail View clone.</para>
+        <para>Maximizes the current detail View.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Base.BaseViewAppearanceCollection">
@@ -8012,7 +8017,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.FocusInvalidRow">
       <summary>
-        <para>Moves focus to an invalid row.</para>
+        <para>Allows you to temporarily hide the row focus.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FormatRuleExpressionEditorCreated">
@@ -9425,7 +9430,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Gets the current row’s index in the data source.</para>
       </summary>
-      <value>An integer value identifying the current row’s index in the data source. Row handles are not data source indexes, see the Accessing Rows in Code. Row Handles section of the “Rows” article for more information.</value>
+      <value>An integer value that identifies the row by its index in the data source.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs.Row">
       <summary>
@@ -9485,6 +9490,12 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets the handle of the currently processed group row. Returns the <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if the CustomColumnDisplayText event is not called for a group row.</para>
       </summary>
       <value>The handle of the currently processed group row.</value>
+    </member>
+    <member name="P:DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs.IsForFilter">
+      <summary>
+        <para>Gets a value that specifies whether the CustomColumnDisplayText event is raised for the Filter Panel.</para>
+      </summary>
+      <value>true if the CustomColumnDisplayText event is raised for the Filter Panel; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs.IsForGroupRow">
       <summary>
@@ -13742,6 +13753,12 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>A value that specifies whether built-in column header search boxes are enabled.</value>
     </member>
+    <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsFilter.ShowInHeaderSearchResults">
+      <summary>
+        <para>Gets or sets whether to display search results within the column header when <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsFilter.InHeaderSearchMode"/> is enabled.</para>
+      </summary>
+      <value>A value that specifies whether to display search results within the column header.</value>
+    </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsFilter.ShowInHeaderSearchTextMode">
       <summary>
         <para>Gets or sets whether to show search text (<see cref="P:DevExpress.XtraGrid.Columns.GridColumn.SearchText"/>) in column header tooltips. This property is in effect if built-in column header search boxes are enabled (see <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsFilter.InHeaderSearchMode"/>).</para>
@@ -13981,6 +13998,18 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets whether the View is printed/exported with all group rows expanded.</para>
       </summary>
       <value>true to print/export the View with all data rows visible regardless of the group rows’ expanded state; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsPrint.IgnoreGroupDrawMode">
+      <summary>
+        <para>Gets or sets whether to print group rows with the default style and ignore the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.GroupDrawMode"/> setting.</para>
+      </summary>
+      <value>True to ignore the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.GroupDrawMode"/> setting; otherwise, False.</value>
+    </member>
+    <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsPrint.IgnoreHtmlDrawGroups">
+      <summary>
+        <para>Gets or sets whether to print group rows with the default style and ignore the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.AllowHtmlDrawGroups"/> setting.</para>
+      </summary>
+      <value>True to ignore the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.AllowHtmlDrawGroups"/> setting; otherwise, False.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsPrint.MaxMergedCellHeight">
       <summary>
@@ -14260,6 +14289,12 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <value>true to paint the odd rows using the appearance settings provided by the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridViewAppearances.OddRow"/> property; false to use the appearance settings provided by the <see cref="P:DevExpress.XtraGrid.Views.Grid.GridViewAppearances.Row"/> property.</value>
     </member>
+    <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.FixedColumnHighlightMode">
+      <summary>
+        <para>Gets or sets whether to render fixed columns with thicker column borders or a different cell background color.</para>
+      </summary>
+      <value>A GridFixedColumnHighlightMode enumeration value that specifies how to distinguish the fixed columns from regular columns.</value>
+    </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.GroupDrawMode">
       <summary>
         <para>Gets or sets a value specifying how group rows should be painted.</para>
@@ -14445,6 +14480,11 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>A column header search button is pressed.</para>
       </summary>
     </member>
+    <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.ColumnHeaderSearchTextDown">
+      <summary>
+        <para>Reserved for future use.</para>
+      </summary>
+    </member>
     <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.ColumnSizing">
       <summary>
         <para>A column’s right edge is being dragged to change the column’s width. The desired column’s <see cref="P:DevExpress.XtraGrid.Columns.OptionsColumn.AllowSize"/> option must be enabled to allow such resizing.</para>
@@ -14483,6 +14523,11 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.GroupPanelColumnHeaderSearchButtonDown">
       <summary>
         <para>The Search button displayed within the group panel is pressed.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.GroupPanelColumnHeaderSearchTextDown">
+      <summary>
+        <para>Reserved for future use.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraGrid.Views.Grid.GridState.GroupPanelFindPanelButtonPressed">
@@ -15515,6 +15560,20 @@ The method’s argument will contain the requested value. The completed paramete
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
+    </member>
+    <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.HeaderSearchValueNext(DevExpress.XtraGrid.Columns.GridColumn)">
+      <summary>
+        <para>Moves the row focus to the next row that contains the search string in the header of the specified column.</para>
+      </summary>
+      <param name="column">The grid column in which to search.</param>
+      <returns>true if the next row is focused; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.HeaderSearchValuePrevious(DevExpress.XtraGrid.Columns.GridColumn)">
+      <summary>
+        <para>Moves the row focus to the previous row that contains the search string in the header of the specified column.</para>
+      </summary>
+      <param name="column">The grid column in which to search.</param>
+      <returns>true if the previous row has been focused; otherwise, false.</returns>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Grid.GridView.HideCustomization">
       <summary>
@@ -17740,6 +17799,11 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
         <para>The test point belongs to the View’s vertical scroll bar.</para>
       </summary>
     </member>
+    <member name="N:DevExpress.XtraGrid.Views.Items">
+      <summary>
+        <para>Contains classes that implement the Items View functionality (<see cref="T:DevExpress.XtraGrid.Views.Items.ItemsView"/>).</para>
+      </summary>
+    </member>
     <member name="T:DevExpress.XtraGrid.Views.Items.ItemsView">
       <summary>
         <para>Renders items (records) using HTML-CSS templates. (CTP)</para>
@@ -17785,6 +17849,21 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
       <param name="queryCommandParameter">A Func delegate that passes the specific Object to the command as a parameter.</param>
       <typeparam name="T">The type of a ViewModel that stores a bindable command.</typeparam>
       <returns>An IDisposable object. Disposing of this object unbinds the command from this HTML element.</returns>
+    </member>
+    <member name="M:DevExpress.XtraGrid.Views.Items.ItemsView.CalcHitInfo(System.Drawing.Point)">
+      <summary>
+        <para>Returns information about the View elements located at the specified point.</para>
+      </summary>
+      <param name="pt">A Point structure that specifies coordinates of the test point.</param>
+      <returns>An object that contains information on the View elements located at the test point.</returns>
+    </member>
+    <member name="M:DevExpress.XtraGrid.Views.Items.ItemsView.CalcHitInfo(System.Int32,System.Int32)">
+      <summary>
+        <para>Returns information about the View elements located at the specified point.</para>
+      </summary>
+      <param name="x">The X coordinate of the test point relative to the top-left corner of the grid control.</param>
+      <param name="y">The Y coordinate of the test point relative to the top-left corner of the grid control.</param>
+      <returns>An object that contains information on the View elements located at the test point.</returns>
     </member>
     <member name="E:DevExpress.XtraGrid.Views.Items.ItemsView.CustomizeItem">
       <summary>
@@ -20562,6 +20641,12 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       </summary>
       <value>The value of the tile’s current group.</value>
     </member>
+    <member name="P:DevExpress.XtraGrid.Views.Tile.BeforeItemDropEventArgs.GroupRowHandle">
+      <summary>
+        <para>Gets the handle of the group from which the tile has been dragged.</para>
+      </summary>
+      <value>A negative zero-based integer that identifies the group. -2147483648 if the TileView is not grouped.</value>
+    </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.BeforeItemDropEventArgs.IndexInGroup">
       <summary>
         <para>Gets the visible index of the current tile in its original group.</para>
@@ -20585,6 +20670,12 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
         <para>Gets the value of the new group to which the tile is about to be dropped.</para>
       </summary>
       <value>The value of the tile’s new group.</value>
+    </member>
+    <member name="P:DevExpress.XtraGrid.Views.Tile.BeforeItemDropEventArgs.NewGroupRowHandle">
+      <summary>
+        <para>Gets the handle of the group to which the tile is dropped.</para>
+      </summary>
+      <value>A negative zero-based integer that identifies the group. -2147483648 if the TileView is not grouped.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.BeforeItemDropEventArgs.NewKanbanGroup">
       <summary>
@@ -21433,6 +21524,18 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.OptionsFind">
+      <summary>
+        <para>Provides access to the Find Panel settings.</para>
+      </summary>
+      <value>An object that contains the settings of the Find Panel.</value>
+    </member>
+    <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.OptionsHtmlTemplate">
+      <summary>
+        <para>Contains options that are applied when you use HTML and CSS-based templates to render tiles.</para>
+      </summary>
+      <value>The options that are applied when you use HTML and CSS-based templates to render tiles.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.OptionsImageLoad">
       <summary>
@@ -22965,6 +23068,12 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
         <para>Filtering is not supported within the <see cref="T:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView"/>.</para>
       </summary>
     </member>
+    <member name="P:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.OptionsHtmlTemplate">
+      <summary>
+        <para>Contains options that are applied when you use HTML and CSS-based templates to render items.</para>
+      </summary>
+      <value>The options that are applied when you use HTML and CSS-based templates to render items.</value>
+    </member>
     <member name="P:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.OptionsImageLoad">
       <summary>
         <para>Provides access to properties that manage View item image behavior.</para>
@@ -23948,6 +24057,28 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
         <para>Gets or sets whether optimized scrolling mechanics should be used within this WinExplorer View.</para>
       </summary>
       <value>true if optimized scrolling mechanics should be used within this WinExplorer View; otherwise, false.</value>
+    </member>
+    <member name="T:DevExpress.XtraGrid.WinExplorer.WinExplorerViewOptionsHtmlTemplate">
+      <summary>
+        <para>Contains options that are applied when you use HTML and CSS-based templates to render items.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraGrid.WinExplorer.WinExplorerViewOptionsHtmlTemplate.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.WinExplorer.WinExplorerViewOptionsHtmlTemplate"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraGrid.WinExplorer.WinExplorerViewOptionsHtmlTemplate.AllowContentSelection">
+      <summary>
+        <para>Gets or sets whether users can select the contents of HTML tags.</para>
+      </summary>
+      <value>Specifies the initial value of the user-select CSS property for all HTML elements. The DefaultBoolean.True value sets this property to auto, the DefaultBoolean.False and DefaultBoolean.Default values set it to none.</value>
+    </member>
+    <member name="M:DevExpress.XtraGrid.WinExplorer.WinExplorerViewOptionsHtmlTemplate.Assign(DevExpress.Utils.Controls.BaseOptions)">
+      <summary>
+        <para>Copies all settings from the options object passed as the parameter and assigns them to the current object.</para>
+      </summary>
+      <param name="options">A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.</param>
     </member>
     <member name="T:DevExpress.XtraGrid.WinExplorer.WinExplorerViewOptionsImageLoad">
       <summary>

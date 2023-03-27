@@ -1675,7 +1675,7 @@
     </member>
     <member name="E:DevExpress.XtraDiagram.DiagramControl.ConnectionChanged">
       <summary>
-        <para>Occurs after the connection has been changed by the end-user.</para>
+        <para>Occurs after the connection has been changed by a user.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraDiagram.DiagramControl.ConnectionChanging">

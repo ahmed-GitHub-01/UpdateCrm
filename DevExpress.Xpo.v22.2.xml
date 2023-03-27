@@ -411,7 +411,7 @@
     </member>
     <member name="T:DevExpress.Xpo.DB.AccessConnectionProvider">
       <summary>
-        <para>Implements data-aware operations for working with MS Access databases.</para>
+        <para>Implements data-aware operations for working with Microsoft Access databases.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Xpo.DB.AccessConnectionProvider.#ctor(System.Data.IDbConnection,DevExpress.Xpo.DB.AutoCreateOption)">
@@ -505,7 +505,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.AccessConnectionProvider.GetConnectionString(System.String,System.String,System.String)">
       <summary>
-        <para>Returns a connection string to the specified MS Access database using the specified credentials.</para>
+        <para>Returns a connection string to the specified Microsoft Access database using the specified credentials.</para>
       </summary>
       <param name="database">A string that specifies the path and name of the database to connect to.</param>
       <param name="userId">A string that specifies the user’s name. This is used to initialize the “User ID” field of the connection string.</param>
@@ -514,14 +514,14 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.AccessConnectionProvider.GetConnectionString(System.String)">
       <summary>
-        <para>Returns a connection string to the specified MS Access data base using the default credentials.</para>
+        <para>Returns a connection string to the specified Microsoft Access data base using the default credentials.</para>
       </summary>
       <param name="database">A string that specifies the path and name of the data base to connect to.</param>
       <returns>A connection string.</returns>
     </member>
     <member name="M:DevExpress.Xpo.DB.AccessConnectionProvider.GetConnectionStringACE(System.String,System.String)">
       <summary>
-        <para>Returns a connection string to the specified MS Access 2007 database using the default credentials.</para>
+        <para>Returns a connection string to the specified Microsoft Access 2007 database using the default credentials.</para>
       </summary>
       <param name="database">A string that specifies the path and name of the data base to connect to.</param>
       <param name="password">A string that specifies the password. This is used to initialize the “Password” field of the connection string.</param>
@@ -567,7 +567,7 @@
     </member>
     <member name="T:DevExpress.Xpo.DB.AccessConnectionProviderMultiUserThreadSafe">
       <summary>
-        <para>Implements an MS Access connection provider that can be used in multi-user and multi-threaded applications.</para>
+        <para>Implements an Microsoft Access connection provider that can be used in multi-user and multi-threaded applications.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Xpo.DB.AccessConnectionProviderMultiUserThreadSafe.#ctor(System.String,DevExpress.Xpo.DB.AutoCreateOption)">
@@ -595,7 +595,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.AccessConnectionProviderMultiUserThreadSafe.GetConnectionString(System.String,System.String,System.String)">
       <summary>
-        <para>Returns a connection string to the specified MS Access data base using the specified credentials.</para>
+        <para>Returns a connection string to the specified Microsoft Access data base using the specified credentials.</para>
       </summary>
       <param name="database">A string that specifies the path and name of the data base to connect to.</param>
       <param name="userId">A string that specifies the user’s name. This is used to initialize the “User ID” field of the connection string.</param>
@@ -604,7 +604,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.AccessConnectionProviderMultiUserThreadSafe.GetConnectionString(System.String)">
       <summary>
-        <para>Returns a connection string to the specified MS Access data base.</para>
+        <para>Returns a connection string to the specified Microsoft Access data base.</para>
       </summary>
       <param name="database">A string that specifies the path and name of the data base to connect to.</param>
       <returns>A connection string.</returns>
@@ -1086,7 +1086,7 @@
       <summary>
         <para>Returns a cached data store provider, created based on specified settings.</para>
       </summary>
-      <param name="connectionString">A connection string for an MS SQL Server database that supports Query Notifications.</param>
+      <param name="connectionString">A connection string for an Microsoft SQL Server database that supports Query Notifications.</param>
       <param name="autoCreateOption">An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value that specifies which operations should be performed when a data store is accessed for the first time.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
       <returns>A <see cref="T:DevExpress.Xpo.DB.DataCacheNodeLocal"/> instance (an <see cref="T:DevExpress.Xpo.DB.IDataStore"/> implementation) which is connected to a <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> associated with a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/>, that is created based on specified settings.</returns>
@@ -1095,7 +1095,7 @@
       <summary>
         <para>Returns a cached data store provider, created based on specified settings.</para>
       </summary>
-      <param name="connectionString">A connection string for an MS SQL Server database that supports Query Notifications.</param>
+      <param name="connectionString">A connection string for an Microsoft SQL Server database that supports Query Notifications.</param>
       <param name="autoCreateOption">An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value that specifies which operations should be performed when a data store is accessed for the first time.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnecting from the database.</param>
       <returns>A <see cref="T:DevExpress.Xpo.DB.DataCacheNode"/> instance (an <see cref="T:DevExpress.Xpo.DB.IDataStore"/> implementation) which is connected to a <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> associated with a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/>, that is created based on specified settings.</returns>
@@ -1104,7 +1104,7 @@
       <summary>
         <para>This method is obsolete (use <see cref="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateSqlDependencyCacheRoot(System.Data.IDbConnection,DevExpress.Xpo.DB.IDataStore,DevExpress.Xpo.DB.Helpers.ISqlGeneratorFormatter,DevExpress.Xpo.DB.Helpers.DataCacheConfiguration,System.IDisposable[]@)"/> instead).</para>
       </summary>
-      <param name="nonCachedProvider">An MS SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object as the parameter.</param>
+      <param name="nonCachedProvider">An Microsoft SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object as the parameter.</param>
       <param name="connection">An <see cref="T:System.Data.SqlClient.SqlConnection"/> object providing access to a database to be cached.</param>
       <param name="formatter">A SQL query formatter (an object implementing the ISqlGeneratorFormatter). Normally, you can pass an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object as the parameter.</param>
       <param name="cacheConfiguration">A <see cref="T:DevExpress.Xpo.DB.Helpers.DataCacheConfiguration"/> object providing cache configuration settings.</param>
@@ -1115,7 +1115,7 @@
       <summary>
         <para>This method is obsolete (use <see cref="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateSqlDependencyCacheRoot(System.Data.IDbConnection,DevExpress.Xpo.DB.IDataStore,DevExpress.Xpo.DB.Helpers.ISqlGeneratorFormatter,System.IDisposable[]@)"/> instead).</para>
       </summary>
-      <param name="nonCachedProvider">An MS SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
+      <param name="nonCachedProvider">An Microsoft SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
       <param name="connection">An <see cref="T:System.Data.SqlClient.SqlConnection"/> object providing access to a database to be cached.</param>
       <param name="formatter">A SQL query formatter (an object implementing the ISqlGeneratorFormatter). Normally, you can pass an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
@@ -1150,29 +1150,29 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateSqlDependencyCacheRoot(DevExpress.Xpo.DB.MSSqlConnectionProvider,System.String,DevExpress.Xpo.DB.Helpers.DataCacheConfiguration,System.IDisposable[]@)">
       <summary>
-        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified MS SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
+        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified Microsoft SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
       </summary>
       <param name="nonCachedProvider">An <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> providing access to the database.</param>
-      <param name="originalConnectionString">A connection string for an MS SQL Server database that supports Query Notifications.</param>
+      <param name="originalConnectionString">A connection string for an Microsoft SQL Server database that supports Query Notifications.</param>
       <param name="cacheConfiguration">A <see cref="T:DevExpress.Xpo.DB.Helpers.DataCacheConfiguration"/> object providing cache configuration settings.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
       <returns>An <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance (an <see cref="T:DevExpress.Xpo.DB.ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.</returns>
     </member>
     <member name="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateSqlDependencyCacheRoot(DevExpress.Xpo.DB.MSSqlConnectionProvider,System.String,System.IDisposable[]@)">
       <summary>
-        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified MS SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
+        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified Microsoft SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
       </summary>
       <param name="nonCachedProvider">An <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> providing access to the database.</param>
-      <param name="originalConnectionString">A connection string for an MS SQL Server database that supports Query Notifications.</param>
+      <param name="originalConnectionString">A connection string for an Microsoft SQL Server database that supports Query Notifications.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
       <returns>An <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance (an <see cref="T:DevExpress.Xpo.DB.ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.</returns>
     </member>
     <member name="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateSqlDependencyCacheRoot(System.Data.IDbConnection,DevExpress.Xpo.DB.IDataStore,DevExpress.Xpo.DB.Helpers.ISqlGeneratorFormatter,DevExpress.Xpo.DB.Helpers.DataCacheConfiguration,System.IDisposable[]@)">
       <summary>
-        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified MS SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
+        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified Microsoft SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
       </summary>
       <param name="connection">An <see cref="T:System.Data.IDbConnection"/> object providing access to a database to be cached</param>
-      <param name="nonCachedProvider">An MS SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object as the parameter.</param>
+      <param name="nonCachedProvider">An Microsoft SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object as the parameter.</param>
       <param name="formatter">A SQL query formatter (an object implementing the ISqlGeneratorFormatter). Normally, you can pass an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object as the parameter.</param>
       <param name="cacheConfiguration">A <see cref="T:DevExpress.Xpo.DB.Helpers.DataCacheConfiguration"/> object providing cache configuration settings.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
@@ -1180,21 +1180,21 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateSqlDependencyCacheRoot(System.Data.IDbConnection,DevExpress.Xpo.DB.IDataStore,DevExpress.Xpo.DB.Helpers.ISqlGeneratorFormatter,System.IDisposable[]@)">
       <summary>
-        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified MS SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
+        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified Microsoft SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
       </summary>
       <param name="connection">An <see cref="T:System.Data.IDbConnection"/> object providing access to a database to be cached.</param>
-      <param name="nonCachedProvider">An MS SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
+      <param name="nonCachedProvider">An Microsoft SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
       <param name="formatter">A SQL query formatter (an object implementing the ISqlGeneratorFormatter). Normally, you can pass a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
       <returns>An <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance (an <see cref="T:DevExpress.Xpo.DB.ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.</returns>
     </member>
     <member name="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateSqlDependencyCacheRoot(System.Data.IDbConnection,DevExpress.Xpo.DB.IDataStore,System.String,DevExpress.Xpo.DB.Helpers.ISqlGeneratorFormatter,DevExpress.Xpo.DB.Helpers.DataCacheConfiguration,System.IDisposable[]@)">
       <summary>
-        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified MS SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
+        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified Microsoft SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
       </summary>
       <param name="connection">An <see cref="T:System.Data.IDbConnection"/> object providing access to a database to be cached.</param>
-      <param name="nonCachedProvider">An MS SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
-      <param name="originalConnectionString">A connection string for an MS SQL Server database that supports Query Notifications.</param>
+      <param name="nonCachedProvider">An Microsoft SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
+      <param name="originalConnectionString">A connection string for an Microsoft SQL Server database that supports Query Notifications.</param>
       <param name="formatter">A SQL query formatter (an object implementing the ISqlGeneratorFormatter). Normally, you can pass a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
       <param name="cacheConfiguration">A <see cref="T:DevExpress.Xpo.DB.Helpers.DataCacheConfiguration"/> object providing cache configuration settings.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
@@ -1202,11 +1202,11 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateSqlDependencyCacheRoot(System.Data.IDbConnection,DevExpress.Xpo.DB.IDataStore,System.String,DevExpress.Xpo.DB.Helpers.ISqlGeneratorFormatter,System.IDisposable[]@)">
       <summary>
-        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified MS SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
+        <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with a specified Microsoft SQL Server provider, which is used to access a database to be cached, based on specified settings.</para>
       </summary>
       <param name="connection">An <see cref="T:System.Data.IDbConnection"/> object providing access to a database to be cached.</param>
-      <param name="nonCachedProvider">An MS SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
-      <param name="originalConnectionString">A connection string for an MS SQL Server database that supports Query Notifications.</param>
+      <param name="nonCachedProvider">An Microsoft SQL Server provider (an object implementing the <see cref="T:DevExpress.Xpo.DB.IDataStore"/>). Normally, you can pass a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
+      <param name="originalConnectionString">A connection string for an Microsoft SQL Server database that supports Query Notifications.</param>
       <param name="formatter">A SQL query formatter (an object implementing the ISqlGeneratorFormatter). Normally, you can pass a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> object or its descendant as the parameter.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
       <returns>An <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance (an <see cref="T:DevExpress.Xpo.DB.ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.</returns>
@@ -1215,7 +1215,7 @@
       <summary>
         <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/>, which is created to provide access to a database to be cached, based on specified settings.</para>
       </summary>
-      <param name="sqlConnectionConnectionString">A connection string for an MS SQL Server database that supports Query Notifications.</param>
+      <param name="sqlConnectionConnectionString">A connection string for an Microsoft SQL Server database that supports Query Notifications.</param>
       <param name="autoCreateOption">An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value that specifies which operations should be performed when a data store is accessed for the first time.</param>
       <param name="cacheConfiguration">A <see cref="T:DevExpress.Xpo.DB.Helpers.DataCacheConfiguration"/> object providing cache configuration settings.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
@@ -1225,7 +1225,7 @@
       <summary>
         <para>Creates an <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance associated with an <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/>, which is created to provide access to a database to be cached, based on specified settings.</para>
       </summary>
-      <param name="sqlConnectionConnectionString">A connection string for an MS SQL Server database that supports Query Notifications.</param>
+      <param name="sqlConnectionConnectionString">A connection string for an Microsoft SQL Server database that supports Query Notifications.</param>
       <param name="autoCreateOption">An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value that specifies which operations should be performed when a data store is accessed for the first time.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
       <returns>An <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> instance (an <see cref="T:DevExpress.Xpo.DB.ICacheToCacheCommunicationCore"/> implementation) ready to be used as the Root element in a cached hierarchy.</returns>
@@ -1955,7 +1955,7 @@
     </member>
     <member name="T:DevExpress.Xpo.DB.MSSqlConnectionProvider">
       <summary>
-        <para>Implements data-aware operations for working with an MS SQL Server or MS SQL Azure database.</para>
+        <para>Implements data-aware operations for working with an Microsoft SQL Server or Microsoft SQL Azure database.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.#ctor(System.Data.IDbConnection,DevExpress.Xpo.DB.AutoCreateOption)">
@@ -2069,12 +2069,12 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GenerateStoredProcedures(DevExpress.Xpo.DB.DBTable,System.String@)">
       <summary>
-        <para>Generates DDL (Data Description Language) code for the Generating Persistent Classes wizard, when mapping persistent classes to MS SQL Server database views with the help of INSTEAD-OF triggers and stored procedures.</para>
+        <para>Generates DDL (Data Description Language) code for the Generating Persistent Classes wizard, when mapping persistent classes to Microsoft SQL Server database views with the help of INSTEAD-OF triggers and stored procedures.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString(System.String,System.Int32,System.String,System.String,System.String)">
       <summary>
-        <para>Returns a connection string used to open a specified MS SQL database using provided login credentials.</para>
+        <para>Returns a connection string used to open a specified Microsoft SQL database using provided login credentials.</para>
       </summary>
       <param name="server">A string that specifies the SQL server’s name.</param>
       <param name="port">An integer that specifies the server’s port number.</param>
@@ -2085,7 +2085,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString(System.String,System.Int32,System.String)">
       <summary>
-        <para>Returns a connection string used to open a specified MS SQL database using provided login credentials.</para>
+        <para>Returns a connection string used to open a specified Microsoft SQL database using provided login credentials.</para>
       </summary>
       <param name="server">A string that specifies the SQL server’s name.</param>
       <param name="port">An integer that specifies the server’s port number.</param>
@@ -2094,7 +2094,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString(System.String,System.String,System.String,System.String)">
       <summary>
-        <para>Returns a connection string used to open a specified MS SQL database using provided login credentials.</para>
+        <para>Returns a connection string used to open a specified Microsoft SQL database using provided login credentials.</para>
       </summary>
       <param name="server">A string that specifies the SQL server’s name.</param>
       <param name="userId">A string that specifies a user name.</param>
@@ -2104,7 +2104,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString(System.String,System.String)">
       <summary>
-        <para>Returns a connection string used to open a specified MS SQL database using Windows Integrated Security.</para>
+        <para>Returns a connection string used to open a specified Microsoft SQL database using Windows Integrated Security.</para>
       </summary>
       <param name="server">A string that specifies the SQL server name.</param>
       <param name="database">A string that specifies the database name.</param>
@@ -2112,7 +2112,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005CacheRoot(System.String,System.String,System.String,System.String)">
       <summary>
-        <para>Returns a connection string used to open a specified MS SQL database using provided login credentials and to enable the SqlDependency feature.</para>
+        <para>Returns a connection string used to open a specified Microsoft SQL database using provided login credentials and to enable the SqlDependency feature.</para>
       </summary>
       <param name="server">A string that specifies the SQL server name.</param>
       <param name="userId">A string that specifies a user name.</param>
@@ -2122,7 +2122,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005CacheRoot(System.String,System.String)">
       <summary>
-        <para>Returns a connection string used to open a specified MS SQL database using Windows Integrated Security and to enable the SqlDependency feature.</para>
+        <para>Returns a connection string used to open a specified Microsoft SQL database using Windows Integrated Security and to enable the SqlDependency feature.</para>
       </summary>
       <param name="server">A string that specifies the SQL server name.</param>
       <param name="database">A string that specifies the database name.</param>
@@ -2130,7 +2130,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005WithCache(System.String,System.String,System.String,System.String)">
       <summary>
-        <para>Returns a connection string used to open a specified MS SQL database using provided login credentials and to enable the SqlDependency feature.</para>
+        <para>Returns a connection string used to open a specified Microsoft SQL database using provided login credentials and to enable the SqlDependency feature.</para>
       </summary>
       <param name="server">A string that specifies the SQL server name.</param>
       <param name="userId">A string that specifies a user name.</param>
@@ -2140,7 +2140,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionString2005WithCache(System.String,System.String)">
       <summary>
-        <para>Returns a connection string used to open a specified MS SQL database using Windows Integrated Security and to enable the SqlDependency feature.</para>
+        <para>Returns a connection string used to open a specified Microsoft SQL database using Windows Integrated Security and to enable the SqlDependency feature.</para>
       </summary>
       <param name="server">A string that specifies the SQL server name.</param>
       <param name="database">A string that specifies the database name.</param>
@@ -2148,7 +2148,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionStringWithAttach(System.String,System.String,System.Boolean)">
       <summary>
-        <para>Returns a connection string to connect to a MS SQL Server database by attaching a specified .mdf database file to a specific server using Windows Integrated Security.</para>
+        <para>Returns a connection string to connect to a Microsoft SQL Server database by attaching a specified .mdf database file to a specific server using Windows Integrated Security.</para>
       </summary>
       <param name="server">A string that specifies the SQL server name.</param>
       <param name="attachDbFilename">A string specifying a .mdf database file to attach to the server. This value is used to initialize the “AttachDbFilename” field of the connection string.</param>
@@ -2157,7 +2157,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.GetConnectionStringWithAttach(System.String,System.String,System.String,System.String,System.Boolean)">
       <summary>
-        <para>Returns a connection string to connect to a MS SQL Server database by attaching a specified .mdf database file to a specific server using specified login credentials.</para>
+        <para>Returns a connection string to connect to a Microsoft SQL Server database by attaching a specified .mdf database file to a specific server using specified login credentials.</para>
       </summary>
       <param name="server">A string that specifies the SQL server name.</param>
       <param name="userId">A string that specifies a user name.</param>
@@ -2227,17 +2227,17 @@
       <summary>
         <para>Indicates whether the connection provider supports the OUTER APPLY operators.</para>
       </summary>
-      <value>true for MS SQL Server version 2005 and later; otherwise, false.</value>
+      <value>true for Microsoft SQL Server version 2005 and later; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.Xpo.DB.MSSqlConnectionProvider.NativeSkipTakeSupported">
       <summary>
         <para>Indicates whether the connection provider supports the SKIP and TAKE (TOP) operators.</para>
       </summary>
-      <value>true for MS SQL Server version 2005 and later; otherwise, false.</value>
+      <value>true for Microsoft SQL Server version 2005 and later; otherwise, false.</value>
     </member>
     <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.ObjectsOwner">
       <summary>
-        <para>The default owner of the objects in the MS SQL database. By default “dbo”.</para>
+        <para>The default owner of the objects in the Microsoft SQL database. By default “dbo”.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Xpo.DB.MSSqlConnectionProvider.Register">
@@ -14527,7 +14527,7 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
     </member>
     <member name="F:DevExpress.Xpo.XpoDefault.AppSettingsConnectionStringKey">
       <summary>
-        <para>Returns the name of the application configuration file’s key that specifies the default connection string. You can add this key to the application configuration file, and specify a connection string. In case the connection string isn’t defined in the application, the connection string specified by this key will be used instead of the XPO’s default MS Access connection string.</para>
+        <para>Returns the name of the application configuration file’s key that specifies the default connection string. You can add this key to the application configuration file, and specify a connection string. In case the connection string isn’t defined in the application, the connection string specified by this key will be used instead of the XPO’s default Microsoft Access connection string.</para>
         <para />
       </summary>
     </member>

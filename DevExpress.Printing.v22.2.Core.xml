@@ -1840,6 +1840,26 @@
         <para>When exporting to XLS and XLSX formats, the layout of control elements is retained in the export document; specific data shaping options are not retained, compared to the DataAware export mode.</para>
       </summary>
     </member>
+    <member name="T:DevExpress.Export.GroupState">
+      <summary>
+        <para>Lists values that specify the expanded state of data groups in the exported document.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Export.GroupState.CollapseAll">
+      <summary>
+        <para>Collapse all data groups.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Export.GroupState.Default">
+      <summary>
+        <para>Data groups are collapsed and expanded as they are in the source control.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.Export.GroupState.ExpandAll">
+      <summary>
+        <para>Expand all data groups.</para>
+      </summary>
+    </member>
     <member name="T:DevExpress.Export.SkipFooterRowEventArgs">
       <summary>
         <para>Provides data for the <see cref="E:DevExpress.XtraPrinting.XlsExportOptionsEx.SkipFooterRow"/> and <see cref="E:DevExpress.XtraPrinting.XlsxExportOptionsEx.SkipFooterRow"/> events.</para>
@@ -9466,6 +9486,34 @@
       </summary>
       <value>A string value, representing the XLSX format string.</value>
     </member>
+    <member name="T:DevExpress.Printing.ExportHelpers.ExportSummaryItem">
+      <summary>
+        <para>An object that contains information on the summary calculated in the currently being processed cell.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Printing.ExportHelpers.ExportSummaryItem.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Printing.ExportHelpers.ExportSummaryItem"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Printing.ExportHelpers.ExportSummaryItem.DisplayFormat">
+      <summary>
+        <para>Specifies the display format for the summary item value.</para>
+      </summary>
+      <value>A string that specifies the display format.</value>
+    </member>
+    <member name="P:DevExpress.Printing.ExportHelpers.ExportSummaryItem.FieldName">
+      <summary>
+        <para>Returns a data field whose values are used to calculate the summary.</para>
+      </summary>
+      <value>The data field’s name.</value>
+    </member>
+    <member name="P:DevExpress.Printing.ExportHelpers.ExportSummaryItem.SummaryType">
+      <summary>
+        <para>Returns the summary function type.</para>
+      </summary>
+      <value>The function type.</value>
+    </member>
     <member name="T:DevExpress.Printing.ExportHelpers.IExportContext">
       <summary>
         <para>A base interface that implements methods to modify the exported spreadsheet.</para>
@@ -14330,6 +14378,47 @@
         <para>53x53</para>
       </summary>
     </member>
+    <member name="T:DevExpress.XtraPrinting.BarCode.SSCCGenerator">
+      <summary>
+        <para>A class used to generate an SSCC bar code.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.XtraPrinting.BarCode.SSCCGenerator.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPrinting.BarCode.SSCCGenerator"/> class.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.XtraPrinting.BarCode.SSCCGenerator.CharacterSet">
+      <summary>
+        <para>This property has no effect for the SSCC barcode.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Code128Charset"/> enumeration value that specifies a character set.</value>
+    </member>
+    <member name="M:DevExpress.XtraPrinting.BarCode.SSCCGenerator.CreateSSCCBarcodeData(System.String)">
+      <summary>
+        <para>Calculates application identifier and check digit, and composes a string to display in a bar code.</para>
+      </summary>
+      <param name="text">A string composed of 17 digits: extension digit (1 digit), GS1 Company Prefix (7 digits), Serial Reference (9 digits).</param>
+      <returns>A string that is the data to display in the bar code.</returns>
+    </member>
+    <member name="P:DevExpress.XtraPrinting.BarCode.SSCCGenerator.FNC1Substitute">
+      <summary>
+        <para>This property has no effect for the SSCC barcode.</para>
+      </summary>
+      <value>A string with characters to be replaced.</value>
+    </member>
+    <member name="P:DevExpress.XtraPrinting.BarCode.SSCCGenerator.HumanReadableText">
+      <summary>
+        <para>This property has no effect for the SSCC barcode.</para>
+      </summary>
+      <value>True to insert parentheses into the bar code’s printed text; otherwise, false.</value>
+    </member>
+    <member name="P:DevExpress.XtraPrinting.BarCode.SSCCGenerator.SymbologyCode">
+      <summary>
+        <para>For internal use. Gets the bar code symbology for the current generator object.</para>
+      </summary>
+      <value>A DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology enumeration value.</value>
+    </member>
     <member name="T:DevExpress.XtraPrinting.BarCode.UPCAGenerator">
       <summary>
         <para>Represents the class used to generate an UPC-A barcode.</para>
@@ -15222,6 +15311,27 @@
         <para>Defines the foreground color of the current <see cref="T:DevExpress.XtraPrinting.BrickGraphics"/> object.</para>
       </summary>
       <value>The foreground color of the current <see cref="T:DevExpress.XtraPrinting.BrickGraphics"/> object.</value>
+    </member>
+    <member name="M:DevExpress.XtraPrinting.BrickGraphics.MeasureString(System.String,DevExpress.Drawing.DXFont,System.Int32,DevExpress.Drawing.DXStringFormat,DevExpress.Drawing.DXGraphicsUnit)">
+      <summary>
+        <para>Measures the specified string when drawn.</para>
+      </summary>
+      <param name="text">String to measure.</param>
+      <param name="font">An object that contains font information.</param>
+      <param name="width">The maximum width of the measured string.</param>
+      <param name="stringFormat">An object that contains string format parameters.</param>
+      <param name="pageUnit">An enumeration value that specifies the unit of measurement for the return value.</param>
+      <returns>The string size, measured in pixels.</returns>
+    </member>
+    <member name="M:DevExpress.XtraPrinting.BrickGraphics.MeasureString(System.String,DevExpress.Drawing.DXFont,System.Int32,DevExpress.Drawing.DXStringFormat)">
+      <summary>
+        <para>Measures the specified string when drawn.</para>
+      </summary>
+      <param name="text">String to measure.</param>
+      <param name="font">An object that contains font information.</param>
+      <param name="width">The maximum width of the measured string.</param>
+      <param name="stringFormat">An object that contains string format parameters.</param>
+      <returns>The string size, measured in pixels.</returns>
     </member>
     <member name="M:DevExpress.XtraPrinting.BrickGraphics.MeasureString(System.String,DevExpress.Drawing.DXFont)">
       <summary>
@@ -16745,7 +16855,7 @@
       <summary>
         <para>Gets or sets whether to encode potentially dangerous content from a control or document when it is exported to a CSV file.</para>
       </summary>
-      <value>True, to encode potentially dangeorous content; otherwise, False. Default, to use the ExportSettings.EncodeCsvExecutableContent property value.</value>
+      <value>True, to encode potentially dangerous content; otherwise, False. Default, to use the ExportSettings.EncodeCsvExecutableContent property value.</value>
     </member>
     <member name="P:DevExpress.XtraPrinting.CsvExportOptions.FollowReportLayout">
       <summary>
@@ -23774,6 +23884,7 @@
       <summary>
         <para>Defines the font used to draw text within the current brick.</para>
       </summary>
+      <value>The used font.</value>
     </member>
     <member name="P:DevExpress.XtraPrinting.TextBrick.HorzAlignment">
       <summary>

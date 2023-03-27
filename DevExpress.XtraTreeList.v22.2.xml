@@ -411,6 +411,12 @@
       </summary>
       <value>An object that represents a collection of cells.</value>
     </member>
+    <member name="P:DevExpress.XtraTreeList.ClipboardNodeCopyingEventArgs.NodeHandle">
+      <summary>
+        <para>Gets the handle of the processed node.</para>
+      </summary>
+      <value>A zero-based integer value that identifies the processed node. -2147483648 if the processed row is not a node.</value>
+    </member>
     <member name="P:DevExpress.XtraTreeList.ClipboardNodeCopyingEventArgs.Type">
       <summary>
         <para>Gets the type of the processed row.</para>
@@ -2720,6 +2726,12 @@
       </summary>
       <value>A string value representing the text of the preview section being painted.</value>
     </member>
+    <member name="P:DevExpress.XtraTreeList.CustomDrawNodePreviewEventArgs.PreviewTextBounds">
+      <summary>
+        <para>Gets the content bounds of the preview section.</para>
+      </summary>
+      <value>A bounding rectangle.</value>
+    </member>
     <member name="T:DevExpress.XtraTreeList.CustomDrawNodePreviewEventHandler">
       <summary>
         <para>Represents a method that will handle the <see cref="E:DevExpress.XtraTreeList.TreeList.CustomDrawNodePreview"/> event.</para>
@@ -2921,6 +2933,31 @@
     <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.String">
       <summary>
         <para>Indicates that the column contains string values (the <see cref="T:System.String"/> type).</para>
+      </summary>
+    </member>
+    <member name="T:DevExpress.XtraTreeList.EditFormColumnCaptionLocation">
+      <summary>
+        <para>Enumerates values that specify the location of the editor’s caption within the Edit Form.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraTreeList.EditFormColumnCaptionLocation.Default">
+      <summary>
+        <para>Specifies the same location as EditFormColumnCaptionLocation.Near.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraTreeList.EditFormColumnCaptionLocation.Near">
+      <summary>
+        <para>The caption is displayed on the left side of the editor (left-to-right layout); otherwise, the caption is displayed to the right of the editor (right-to-left layout).</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraTreeList.EditFormColumnCaptionLocation.None">
+      <summary>
+        <para>Hides the caption.</para>
+      </summary>
+    </member>
+    <member name="F:DevExpress.XtraTreeList.EditFormColumnCaptionLocation.Top">
+      <summary>
+        <para>The caption is located above the editor.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraTreeList.EditFormHiddenEventArgs">
@@ -4809,10 +4846,21 @@
       </summary>
       <value>true, to copy the tree hierarchy (indents) to the clipboard; otherwise, false.</value>
     </member>
+    <member name="T:DevExpress.XtraTreeList.RowClickEventArgs">
+      <summary>
+        <para>Supplies data for the <see cref="E:DevExpress.XtraTreeList.TreeList.RowClick"/>, <see cref="E:DevExpress.XtraTreeList.TreeList.RowSelectImageClick"/>, and <see cref="E:DevExpress.XtraTreeList.TreeList.RowStateImageClick"/> events.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraTreeList.RowClickEventArgs.#ctor(DevExpress.Utils.DXMouseEventArgs,DevExpress.XtraTreeList.Nodes.TreeListNode)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraTreeList.RowClickEventArgs"/> class with specified settings.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraTreeList.RowClickEventArgs.HitInfo">
+      <summary>
+        <para>Gets an object that identifies the clicked UI element.</para>
+      </summary>
+      <value>A <see cref="T:DevExpress.XtraTreeList.TreeListHitInfo"/> object that identifies the clicked UI element.</value>
     </member>
     <member name="T:DevExpress.XtraTreeList.ScrollVisibility">
       <summary>
@@ -5995,6 +6043,11 @@
       </summary>
       <value>A <see cref="T:System.Drawing.Rectangle"/> structure representing the Customization Form’s boundaries.</value>
     </member>
+    <member name="E:DevExpress.XtraTreeList.TreeList.CustomizationFormSearch">
+      <summary>
+        <para>Allows you to filter search results when a user searches in the Advanced Customization Form.</para>
+      </summary>
+    </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.CustomizationRowCount">
       <summary>
         <para>This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList.CustomizationFormBounds"/> property instead.</para>
@@ -6754,12 +6807,26 @@
       <param name="column">A <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/> that owns a cell whose visible text is to be obtained.</param>
       <returns>A String value that is the visible cell text.</returns>
     </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.GetFocusedRowCellDisplayText(System.String)">
+      <summary>
+        <para>Returns the string/text displayed in the specified cell in the focused node.</para>
+      </summary>
+      <param name="fieldName">The field name of a column that contains the cell.</param>
+      <returns>The text displayed in the specified cell.</returns>
+    </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetFocusedRowCellValue(DevExpress.XtraTreeList.Columns.TreeListColumn)">
       <summary>
         <para>Retrieves the value stored within the required cell of the currently focused row.</para>
       </summary>
       <param name="column">A <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/> that specifies a column that owns a target cell.</param>
       <returns>An Object that is the cell value.</returns>
+    </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.GetFocusedRowCellValue(System.String)">
+      <summary>
+        <para>Returns the value of the specified cell in the focused node.</para>
+      </summary>
+      <param name="fieldName">The field name of a column that contains the cell.</param>
+      <returns>An object that specifies the cell’s value. null (Nothing in Visual Basic) if the specified cell was not found.</returns>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetGroupSummaryValue(DevExpress.XtraTreeList.Columns.TreeListColumn,DevExpress.XtraTreeList.Nodes.TreeListNodes)">
       <summary>
@@ -6846,6 +6913,14 @@
       <param name="column">A <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/> that owns a cell whose text is to be returned.</param>
       <returns>A String value that is the visible cell text.</returns>
     </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.GetRowCellDisplayText(DevExpress.XtraTreeList.Nodes.TreeListNode,System.String)">
+      <summary>
+        <para>Returns the string/text displayed in the specified cell.</para>
+      </summary>
+      <param name="node">A node that contains the cell.</param>
+      <param name="fieldName">The field name of a column that contains the cell.</param>
+      <returns>The text displayed in the specified cell.</returns>
+    </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetRowCellValue(DevExpress.XtraTreeList.Nodes.TreeListNode,DevExpress.XtraTreeList.Columns.TreeListColumn)">
       <summary>
         <para>Retrieves the value stored within the required cell.</para>
@@ -6853,6 +6928,14 @@
       <param name="node">A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object that specifies a row that owns a target cell.</param>
       <param name="column">A <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/> that specifies a column that owns a target cell.</param>
       <returns>An Object that is the cell value.</returns>
+    </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.GetRowCellValue(DevExpress.XtraTreeList.Nodes.TreeListNode,System.String)">
+      <summary>
+        <para>Returns the value of the specified cell.</para>
+      </summary>
+      <param name="node">A node that contains the cell.</param>
+      <param name="fieldName">The field name of a column that contains the cell.</param>
+      <returns>An object that specifies the cell’s value. null (Nothing in Visual Basic) if the specified cell was not found.</returns>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.GetScrollAnnotations(DevExpress.XtraEditors.Annotations.ScrollAnnotationKind)">
       <summary>
@@ -7092,6 +7175,12 @@
       </summary>
       <param name="rowInfo">An object that contains view information about a tree list node.</param>
     </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.InvalidateRowPreview(DevExpress.XtraTreeList.Nodes.TreeListNode)">
+      <summary>
+        <para>Invalidates the preview section in the specified node.</para>
+      </summary>
+      <param name="node">The node whose preview section is to be invalidated.</param>
+    </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.InvalidateScrollAnnotations">
       <summary>
         <para>Invalidates scrollbar annotations, and causes them to be redrawn.</para>
@@ -7151,6 +7240,13 @@
         <para>Gets whether the current Tree List control functions as a part of a <see cref="T:DevExpress.XtraEditors.TreeListLookUpEdit"/> control.</para>
       </summary>
       <value>true if the current Tree List control functions as a part of a <see cref="T:DevExpress.XtraEditors.TreeListLookUpEdit"/> control; otherwise, false.</value>
+    </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.IsNewItemRow(DevExpress.XtraTreeList.Nodes.TreeListNode)">
+      <summary>
+        <para>Identifies whether the specified node is the New Item Row.</para>
+      </summary>
+      <param name="node">The node.</param>
+      <returns>true if the specified node is the New Item Row; otherwise, false.</returns>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.IsNodeVisible(DevExpress.XtraTreeList.Nodes.TreeListNode)">
       <summary>
@@ -7347,6 +7443,12 @@
       </summary>
       <param name="kind">A kind of scroll annotation.</param>
       <returns>true if the focus is successfully moved; otherwise, false.</returns>
+    </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.MoveToParent">
+      <summary>
+        <para>Moves the node focus to the parent node of the currently focused node.</para>
+      </summary>
+      <returns>The parent node. null (Nothing in Visual Basic) if the currently focused node is the root node.</returns>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.MoveToPrevScrollAnnotation(DevExpress.XtraEditors.Annotations.ScrollAnnotationKind)">
       <summary>
@@ -7602,6 +7704,12 @@
       <summary>
         <para>Updates the Tree List control to reflect changes made to a data source.</para>
       </summary>
+    </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.RefreshEditor(System.Boolean)">
+      <summary>
+        <para>Refreshes the appearance and value of the active editor.</para>
+      </summary>
+      <param name="updateEditorValue">true to update the edit value and appearance; false to update the appearance of the editor.</param>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.RefreshNode(DevExpress.XtraTreeList.Nodes.TreeListNode)">
       <summary>
@@ -7986,6 +8094,12 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       </summary>
       <value>A value that specifies which column cells display editor buttons.</value>
     </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.ShowContextMenu">
+      <summary>
+        <para>Displays a node context menu for the focused cell.</para>
+      </summary>
+      <returns>true if the context menu was displayed; otherwise, false.</returns>
+    </member>
     <member name="M:DevExpress.XtraTreeList.TreeList.ShowCustomization">
       <summary>
         <para>Displays the Customization Form.</para>
@@ -8274,6 +8388,12 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
+    </member>
+    <member name="P:DevExpress.XtraTreeList.TreeList.UseAdvancedCustomizationForm">
+      <summary>
+        <para>Gets or sets whether to use the advanced Customization Form.</para>
+      </summary>
+      <value>True to use the advanced customization form; False to use the default customization form.</value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeList.UseDirectXPaint">
       <summary>
@@ -8722,12 +8842,20 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraTreeList.TreeListInitNewRowEventArgs"/> class with specified settings.</para>
       </summary>
+      <param name="node">A new node.</param>
+      <param name="parentNode">The parent node. This value is assigned to the <see cref="P:DevExpress.XtraTreeList.TreeListInitNewRowEventArgs.ParentNode"/> property.</param>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeListInitNewRowEventArgs.#ctor(DevExpress.XtraTreeList.Nodes.TreeListNode)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraTreeList.TreeListInitNewRowEventArgs"/> class with specified settings.</para>
       </summary>
       <param name="node">An object that specifies the tree list node being created.</param>
+    </member>
+    <member name="P:DevExpress.XtraTreeList.TreeListInitNewRowEventArgs.ParentNode">
+      <summary>
+        <para>Gets the parent node.</para>
+      </summary>
+      <value>The parent node. null (Nothing in Visual Basic) if the new node is the root node.</value>
     </member>
     <member name="M:DevExpress.XtraTreeList.TreeListInitNewRowEventArgs.SetValue(System.Object,System.Object)">
       <summary>
