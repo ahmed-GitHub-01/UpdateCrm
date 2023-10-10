@@ -237,6 +237,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:HOL_.DataSet2.CustomerSearchPrintDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:HOL_.DataSet2.FAX_TO_WORKRow">
 <summary>
 Represents strongly named DataRow class.
@@ -407,6 +412,11 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
+<member name="T:HOL_.DataSet2.CustomerSearchPrintRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
 <member name="T:HOL_.DataSet2.FAX_TO_WORKRowChangeEvent">
 <summary>
 Row event argument class
@@ -573,6 +583,11 @@ Row event argument class
 </summary>
 </member>
 <member name="T:HOL_.DataSet2.COVER_ROOLRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:HOL_.DataSet2.CustomerSearchPrintRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
